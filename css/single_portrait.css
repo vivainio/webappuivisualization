@@ -1,0 +1,40 @@
+/*
+ * Add your Stylesheet contents here
+ */
+#titlebar {
+	
+}
+
+#stage {
+	height: 235px;
+	width: 240px;
+	overflow: hidden;
+}
+
+#slider {
+	-webkit-transition: margin-left 0.5s linear;
+}
+
+.show_main {
+	margin-left: 0px;
+}
+
+.show_miniapp {
+	margin-left: -240px;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.slider_table {
+	width: 200%;
+}
+
+.slider_section {
+	width: 240px
+}

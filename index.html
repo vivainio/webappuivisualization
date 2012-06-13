@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MiniApps</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="javascript" type="text/javascript"
+	src="js/screensize.js"></script>
+<link rel="stylesheet" href="css/base_s40.css" type="text/css" />
+<meta name="Generator" content="Nokia WDE 3.2.0" />
+</head>
+<body onload="javascript:init();">
+	<!--Main-->
+	<div id="main">
+
+		<!--Header-->
+		<div id="titlebar" class="header_background">
+			<table class="header_table" cellpadding="0" cellspacing="0"
+				summary="Default Header Table">
+				<tr>
+					<td><div id="title">MiniApps</div>
+					</td>
+					<td class="alignR" width="40">
+						<div id="navigateToggle">
+							<div id="home" class="show">
+								<img src="img/header_search.png" height="40" width="43"
+									alt="Home" />
+							</div>
+							<div id="miniappGoHomeToggle" class="hide">
+								<img src="img/header_home.png" height="40" width="43"
+									onclick="mwl.setGroupTarget('#navigateToggle','#home', 'show', 'hide'); mwl.switchClass('#slider', 'show_miniapp', 'show_main'); mwl.scrollTo('#main')"
+									alt="Home" />
+							</div>
+						</div></td>
+				</tr>
+			</table>
+		</div>
+		<!--End Header-->
+
+
+		<!--Stage-->
+		<div id="stage" style="height: 300px;">
+			<table id="slider" class="show_main slider_table" cellspacing="0"
+				cellpadding="0" border="0" summary="Slider Table">
+				<tr>
+					<td>
+						<table class="slider_section" cellpadding="0" cellspacing="0"
+							summary="Tab Table">
+							<tr>
+								<td id="tab_1" class="tab tab_selected"
+									onclick="mwl.setGroupTarget('#tab_control_content', '#tab_1_content', 'show', 'hide');mwl.switchClass('#tab_1', 'tab_not_selected', 'tab_selected');mwl.switchClass('#tab_2', 'tab_selected', 'tab_not_selected');mwl.switchClass('#tab_3', 'tab_selected', 'tab_not_selected');">
+									ELEMENTS</td>
+								<td id="tab_2" class="tab tab_not_selected"
+									onclick="mwl.setGroupTarget('#tab_control_content', '#tab_2_content', 'show', 'hide');mwl.switchClass('#tab_1', 'tab_selected', 'tab_not_selected');mwl.switchClass('#tab_2', 'tab_not_selected', 'tab_selected');mwl.switchClass('#tab_3', 'tab_selected', 'tab_not_selected');">
+									NAVIGATION</td>
+								<td id="tab_3" class="tab tab_not_selected"
+									onclick="mwl.setGroupTarget('#tab_control_content', '#tab_3_content', 'show', 'hide');mwl.switchClass('#tab_1', 'tab_selected', 'tab_not_selected');mwl.switchClass('#tab_2', 'tab_selected', 'tab_not_selected');mwl.switchClass('#tab_3', 'tab_not_selected', 'tab_selected');">
+									PATTERNS</td>
+							</tr>
+						</table> <!-- End Tab Control --> <!-- Tab Control Content -->
+						<div id="tab_control_content">
+							<div id="tab_1_content" class="show slider_section">
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#buttons', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Buttons</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#radioButtons', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Buttons
+									- radio</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#checkBoxes', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Check
+									boxes</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#lists', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Lists</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#tabs', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Tabs</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#textFields', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Text
+									fields</div>
+							</div>
+							<div id="tab_2_content" class="hide slider_section">
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#carousselInItem', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Caroussel,
+									in-item</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#carousselItem', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Caroussel,
+									item</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#dynamicLooping', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Dynamic
+									looping</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#expandableList', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Expandable
+									list</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#settings', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Settings</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#tabbedPages', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Tabbed
+									pages</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#treeStructure', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Tree
+									structure</div>
+							</div>
+							<div id="tab_3_content" class="hide slider_section">
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#fileUpload', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">File
+									upload</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#pageTitleLink', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Page
+									title link</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#passwords', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Passwords</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#progressIndicators', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Progress
+									indicators</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#search', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Search</div>
+								<div class="list_item"
+									onclick="mwl.setGroupTarget('#appsSection','#sharingContent', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#home', 'hide', 'show');">Sharing
+									content</div>
+							</div>
+						</div></td>
+					<td>
+						<div id="appsSection">
+							<!--Buttons mini app-->
+							<div id="buttons" class="slider_section show">Buttons</div>
+							<!--End Buttons mini app-->
+
+
+							<!--RadioButtons mini app-->
+							<div id="radioButtons" class="slider_section show">Buttons
+								- radio</div>
+							<!--End RadioButtons mini app-->
+
+
+							<!--CheckBoxes mini app-->
+							<div id="checkBoxes" class="slider_section hide">Check
+								boxes</div>
+							<!--End CheckBoxes mini app-->
+
+
+							<!--Lists mini app-->
+							<div id="lists" class="slider_section hide">Lists</div>
+							<!--End Lists mini app-->
+
+
+							<!--Tabs mini app-->
+							<div id="tabs" class="slider_section hide">Tabs</div>
+							<!--End Tabs mini app-->
+
+
+							<!--TextFields mini app-->
+							<div id="textFields" class="slider_section hide">Text
+								fields</div>
+							<!--End TextFields mini app-->
+
+
+							<!--CarousselInItem mini app-->
+							<div id="carousselInItem" class="slider_section show">Caroussel,
+								in-item</div>
+							<!--End CarousselInItem mini app-->
+
+
+							<!--Caroussel mini app-->
+							<div id="carousselItem" class="slider_section show">Caroussel,
+								item</div>
+							<!--End Buttons mini app-->
+
+
+							<!--DynamicLooping mini app-->
+							<div id="dynamicLooping" class="slider_section show">Dynamic
+								looping</div>
+							<!--End DynamicLooping mini app-->
+
+
+							<!--ExpandableList mini app-->
+							<div id="expandableList" class="slider_section show">Expandable
+								List</div>
+							<!--End ExpandableList mini app-->
+
+
+							<!--Settings mini app-->
+							<div id="settings" class="slider_section show">Settings</div>
+							<!--End Settings mini app-->
+
+
+							<!--TabbedPages mini app-->
+							<div id="tabbedPages" class="slider_section show">Tabbed
+								Pages</div>
+							<!--End TabbedPages mini app-->
+
+
+							<!--TreeStructure mini app-->
+							<div id="treeStructure" class="slider_section show">Tree
+								structure</div>
+							<!--End TreeStructure mini app-->
+
+
+							<!--FileUpload mini app-->
+							<div id="fileUpload" class="slider_section show">File
+								upload</div>
+							<!--End FileUpload mini app-->
+
+
+							<!--PageTitleLink mini app-->
+							<div id="pageTitleLink" class="slider_section show">Page
+								title link</div>
+							<!--End PageTitleLink mini app-->
+
+
+							<!--Password mini app-->
+							<div id="password" class="slider_section show">Password</div>
+							<!--End Password mini app-->
+
+
+							<!--ProgressIndicators mini app-->
+							<div id="progressIndicators" class="slider_section show">Progress
+								indicators</div>
+							<!--End ProgressIndicators mini app-->
+
+
+							<!--Search mini app-->
+							<div id="search" class="slider_section show">Search</div>
+							<!--End Search mini app-->
+
+
+							<!--SharingContent mini app-->
+							<div id="sharingContent" class="slider_section show">Sharing
+								content</div>
+							<!--End SharingContent mini app-->
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--End Stage-->
+	</div>
+	<!--End Main-->
+</body>
+</html>
+
