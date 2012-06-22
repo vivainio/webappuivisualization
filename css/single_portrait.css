@@ -38,3 +38,48 @@
 .slider_section {
 	width: 240px
 }
+
+.miniapp_section {
+	padding: 8px 8px 8px 8px;
+}
+
+.button_2_in_row{
+	width: 100px;	
+}
+
+.button_3_in_row{
+	width: 60px;	
+}
+
+.checkableInListItem{
+	float: right;
+	margin-right: 10px;
+}
+	
+.category {
+	border-bottom: 2px #fff solid
+}
+
+.category_header {
+	width: 100%;
+	height: 40px;
+	color: black;
+	background-color: #ced3c6;
+	font-weight: bold;
+}
+
+.category_table {
+	height: 40px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.category_name {
+	width: 85%;
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 0px 10px 0px 8px;
+	vertical-align: middle;
+}

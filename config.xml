@@ -13,6 +13,10 @@
 
     <content src="index.html"/>
     
+    <author email="john.doe@example.com" href="http://www.example.com">
+        John Doe
+    </author>
+    
     <license>
 	   
     </license>
