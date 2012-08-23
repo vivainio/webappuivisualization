@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>MiniApps</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script language="javascript" type="text/javascript"
-	src="js/screensize.js"></script>
-<link rel="stylesheet" href="css/base_s40.css" type="text/css" />
-<meta name="Generator" content="Nokia WDE 3.2.0" />
+	<title>MiniApps</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script language="javascript" type="text/javascript" src="js/screensize.js"></script>
+	<script language="javascript" type="text/javascript" src="js/utils.js"></script>
+	<link rel="stylesheet" href="css/base_s40.css" type="text/css" />
+	<meta name="Generator" content="Nokia WDE 3.2.0" />
 </head>
 <body onload="javascript:init();">
 	<!--Main-->
@@ -17,16 +17,15 @@
 			<table class="header_table" cellpadding="0" cellspacing="0"
 				summary="Default Header Table">
 				<tr>
-					<td><div id="title">MiniApps</div>
-					</td>
-					<td class="alignR" width="40">
-						<div id="navigateToggle" style="background-color: gray">
+					<td><div id="title">MiniApps</div></td>
+					<td width="40">
+						<div id="navigateToggle">
 							<div id="home" class="show">
 								<img src="img/top_search.png" height="40" width="43" alt="Home" />
 							</div>
 							<div id="miniappGoHomeToggle" class="hide">
 								<img src="img/top_menu.png" height="40" width="43"
-									onclick="mwl.setGroupTarget('#navigateToggle','#home', 'show', 'hide'); mwl.switchClass('#slider', 'show_miniapp', 'show_main'); mwl.scrollTo('#main'); mwl.setGroupTarget('#appsSection','#buttons', 'hide', 'hide');"
+									onclick="mwl.setGroupTarget('#navigateToggle','#home', 'show', 'hide'); mwl.switchClass('#slider', 'show_miniapp', 'show_main'); mwl.scrollTo('#main');"
 									alt="Home" />
 							</div>
 							<div id="backButton" class="hide">
@@ -34,7 +33,8 @@
 									onclick="mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide'); mwl.setGroupTarget('#tabs', '#tab_views', 'show', 'hide'); "
 									alt="Home" />
 							</div>
-						</div></td>
+						</div>
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -126,10 +126,10 @@
 										class="valignMdl">Expandable list</span>
 								</div>
 								<div class="picture_list_item"
-									onclick="mwl.setGroupTarget('#appsSection','#settings', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
-									<img src="img/list_settings.png" height="24" width="24"
+									onclick="mwl.setGroupTarget('#appsSection','#picker', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+									<img src="img/list_picker.png" height="24" width="24"
 										alt="smile" class="picture_list_item_image"></img><span
-										class="valignMdl">Settings</span>
+										class="valignMdl">Picker</span>
 								</div>
 								<div class="picture_list_item"
 									onclick="mwl.setGroupTarget('#appsSection','#tabbedPages', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -152,7 +152,7 @@
 										class="valignMdl">File upload</span>
 								</div>
 								<div class="picture_list_item"
-									onclick="mwl.setGroupTarget('#appsSection','#fileUpload', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+									onclick="mwl.setGroupTarget('#appsSection','#fileDownload', 'show', 'hide'); mwl.switchClass('#slider', 'show_main', 'show_miniapp'); mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
 									<img src="img/list_download.png" height="24" width="24"
 										alt="smile" class="picture_list_item_image"></img><span
 										class="valignMdl">File download</span>
@@ -876,7 +876,8 @@
 													summary="Category Table">
 													<tr>
 														<td class="category_left"><div>Category 4 +
-																icon</div></td>
+																icon</div>
+														</td>
 														<td class="category_right"><span
 															id="category4_arrows"><img class="show"
 																id="category4_closed_arrow" src="img/button_right.png"
@@ -931,7 +932,8 @@
 												<td id="text_tabs_tab_2_1"
 													class="tab tab_2_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_2tabs_control_content', '#tabs_tab_2_1_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs2_tab_bar', '#text_tabs_tab_2_1', 'tab_selected', 'tab_not_selected');"><span>TAB
-														1</span></td>
+														1</span>
+												</td>
 												<td id="text_tabs_tab_2_2"
 													class="tab tab_2_tabs_right tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_2tabs_control_content', '#tabs_tab_2_2_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs2_tab_bar', '#text_tabs_tab_2_2', 'tab_selected', 'tab_not_selected');">TAB
@@ -941,16 +943,19 @@
 										</table>
 
 										<table id="icon_tabs2_tab_bar_table" cellpadding="0"
-											cellspacing="0" class="width_filling hide" summary="Tab Table">
+											cellspacing="0" class="width_filling hide"
+											summary="Tab Table">
 											<tr id="icon_tabs2_tab_bar">
 												<td id="icon_tabs_tab_2_1"
 													class="tab tab_2_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_2tabs_control_content', '#tabs_tab_2_1_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs2_tab_bar', '#icon_tabs_tab_2_1', 'tab_selected', 'tab_not_selected');">
-													<img src="img/smile.png" alt="smile" /></td>
+													<img src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_2_2"
 													class="tab tab_2_tabs_right tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_2tabs_control_content', '#tabs_tab_2_2_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs2_tab_bar', '#icon_tabs_tab_2_2', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 											</tr>
 										</table>
 
@@ -980,13 +985,15 @@
 									<div id="tabs_3tabs_view" class="hide">
 
 										<table id="text_tabs3_tab_bar_table" cellpadding="0"
-											cellspacing="0" class="width_filling show" summary="Tab Table">
+											cellspacing="0" class="width_filling show"
+											summary="Tab Table">
 											<!-- Text tab bar -->
 											<tr id="text_tabs3_tab_bar">
 												<td id="text_tabs_tab_3_1"
 													class="tab tab_3_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_3tabs_control_content', '#tabs_tab_3_1_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs3_tab_bar', '#text_tabs_tab_3_1', 'tab_selected', 'tab_not_selected');"><span>TAB
-														1</span></td>
+														1</span>
+												</td>
 												<td id="text_tabs_tab_3_2"
 													class="tab tab_3_tabs tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_3tabs_control_content', '#tabs_tab_3_2_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs3_tab_bar', '#text_tabs_tab_3_2', 'tab_selected', 'tab_not_selected');">TAB
@@ -1000,21 +1007,25 @@
 										</table>
 
 										<table id="icon_tabs3_tab_bar_table" cellpadding="0"
-											cellspacing="0" class="width_filling hide" summary="Tab Table">
+											cellspacing="0" class="width_filling hide"
+											summary="Tab Table">
 											<!-- Icon tab bar -->
 											<tr id="icon_tabs3_tab_bar">
 												<td id="icon_tabs_tab_3_1"
 													class="tab tab_3_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_3tabs_control_content', '#tabs_tab_3_1_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs3_tab_bar', '#icon_tabs_tab_3_1', 'tab_selected', 'tab_not_selected');">
-													<img src="img/smile.png" alt="smile" /></td>
+													<img src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_3_2"
 													class="tab tab_3_tabs tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_3tabs_control_content', '#tabs_tab_3_2_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs3_tab_bar', '#icon_tabs_tab_3_2', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_3_3"
 													class="tab tab_3_tabs_right tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_3tabs_control_content', '#tabs_tab_3_3_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs3_tab_bar', '#icon_tabs_tab_3_3', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 											</tr>
 											<!-- End icon tab bar -->
 										</table>
@@ -1046,13 +1057,15 @@
 									<div id="tabs_4tabs_view" class="hide">
 
 										<table id="text_tabs4_tab_bar_table" cellpadding="0"
-											cellspacing="0" class="width_filling show" summary="Tab Table">
+											cellspacing="0" class="width_filling show"
+											summary="Tab Table">
 											<!-- Text tab bar -->
 											<tr id="text_tabs4_tab_bar">
 												<td id="text_tabs_tab_4_1"
 													class="tab tab_4_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_1_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs4_tab_bar', '#text_tabs_tab_4_1', 'tab_selected', 'tab_not_selected');"><span>TAB
-														1</span></td>
+														1</span>
+												</td>
 												<td id="text_tabs_tab_4_2"
 													class="tab tab_4_tabs tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_2_content', 'show', 'hide'); mwl.setGroupTarget('#text_tabs4_tab_bar', '#text_tabs_tab_4_2', 'tab_selected', 'tab_not_selected');">TAB
@@ -1070,25 +1083,30 @@
 										</table>
 
 										<table id="icon_tabs4_tab_bar_table" cellpadding="0"
-											cellspacing="0" class="width_filling hide" summary="Tab Table">
+											cellspacing="0" class="width_filling hide"
+											summary="Tab Table">
 											<!-- Icon tab bar -->
 											<tr id="icon_tabs4_tab_bar">
 												<td id="icon_tabs_tab_4_1"
 													class="tab tab_4_tabs tab_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_1_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs4_tab_bar', '#icon_tabs_tab_4_1', 'tab_selected', 'tab_not_selected');">
-													<img src="img/smile.png" alt="smile" /></td>
+													<img src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_4_2"
 													class="tab tab_4_tabs tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_2_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs4_tab_bar', '#icon_tabs_tab_4_2', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_4_3"
 													class="tab tab_4_tabs tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_3_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs4_tab_bar', '#icon_tabs_tab_4_3', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 												<td id="icon_tabs_tab_4_4"
 													class="tab tab_4_tabs_right tab_not_selected"
 													onclick="mwl.setGroupTarget('#tabs_4tabs_control_content', '#tabs_tab_4_4_content', 'show', 'hide'); mwl.setGroupTarget('#icon_tabs4_tab_bar', '#icon_tabs_tab_4_4', 'tab_selected', 'tab_not_selected');"><img
-													src="img/smile.png" alt="smile" /></td>
+													src="img/smile.png" alt="smile" />
+												</td>
 											</tr>
 											<!-- End icon tab bar -->
 										</table>
@@ -1195,13 +1213,13 @@
 								<div class="text_field_item">
 									<div>Label</div>
 									<div class="text_entry_with_label">
-										<table class="width_filling" cellpadding="0"
-											cellspacing="0" summary="Button Table">
+										<table class="width_filling" cellpadding="0" cellspacing="0"
+											summary="Button Table">
 											<tr>
 												<td class="text_input_cell"><input type="text"
-													name="entry2" />
+													name="entry2" /></td>
+												<td style="padding-left: 10px;"><span>km</span>
 												</td>
-												<td style="padding-left: 10px;"><span>km</span></td>
 											</tr>
 										</table>
 									</div>
@@ -1209,8 +1227,8 @@
 								<div class="text_field_item">
 									<div>Icon button</div>
 									<div class="text_entry_with_icon">
-										<table class="width_filling" cellpadding="0"
-											cellspacing="0" summary="Button Table">
+										<table class="width_filling" cellpadding="0" cellspacing="0"
+											summary="Button Table">
 											<tr>
 												<td class="text_input_cell"><input type="text"
 													name="entry2" />
@@ -1226,8 +1244,8 @@
 								<div class="text_field_item">
 									<div>Text button</div>
 									<div class="text_entry_with_button">
-										<table class="width_filling" cellpadding="0"
-											cellspacing="0" summary="Button Table">
+										<table class="width_filling" cellpadding="0" cellspacing="0"
+											summary="Button Table">
 											<tr>
 												<td class="text_input_with_button_cell"><input
 													type="text" name="entry2" />
@@ -1265,15 +1283,20 @@
 															summary="Images Table" class="carousel_in_item_height">
 															<tr>
 																<td id="t2"><img class="carousel_in_item_image"
-																	src="img/img1.jpg" alt="image1" /></td>
+																	src="img/img1.jpg" alt="image1" />
+																</td>
 																<td id="t1"><img class="carousel_in_item_image"
-																	src="img/img2.jpg" alt="image2" /></td>
+																	src="img/img2.jpg" alt="image2" />
+																</td>
 																<td id="t3"><img class="carousel_in_item_image"
-																	src="img/img3.jpg" alt="image3" /></td>
+																	src="img/img3.jpg" alt="image3" />
+																</td>
 																<td id="t4"><img class="carousel_in_item_image"
-																	src="img/img4.jpg" alt="image4" /></td>
+																	src="img/img4.jpg" alt="image4" />
+																</td>
 																<td id="t5"><img class="carousel_in_item_image"
-																	src="img/img5.jpg" alt="image5" /></td>
+																	src="img/img5.jpg" alt="image5" />
+																</td>
 															</tr>
 														</table>
 													</div>
@@ -1337,15 +1360,20 @@
 											summary="Images Table" class="carousel_in_item_height">
 											<tr>
 												<td><img class="carousel_image" src="img/img1.jpg"
-													alt="image1" /></td>
+													alt="image1" />
+												</td>
 												<td><img class="carousel_image" src="img/img2.jpg"
-													alt="image2" /></td>
+													alt="image2" />
+												</td>
 												<td><img class="carousel_image" src="img/img3.jpg"
-													alt="image3" /></td>
+													alt="image3" />
+												</td>
 												<td><img class="carousel_image" src="img/img4.jpg"
-													alt="image4" /></td>
+													alt="image4" />
+												</td>
 												<td><img class="carousel_image" src="img/img5.jpg"
-													alt="image5" /></td>
+													alt="image5" />
+												</td>
 											</tr>
 										</table>
 									</div>
@@ -1355,8 +1383,81 @@
 
 
 							<!--DynamicLooping mini app-->
-							<div id="dynamicLooping" class="slider_section hide">Dynamic
-								looping</div>
+							<div id="dynamicLooping" class="slider_section hide">
+								<div class="list_section_header">Dynamic looping</div>
+
+								<!-- DynamicLooping Control Content -->
+								<div id="dynamicLooping_content">
+									<div id="dynLoop_content_1" class="show">
+										<div class="text_block">Press one button.</div>
+										<table width="100%" cellpadding="0" cellspacing="0">
+											<tr>
+												<td class="alignR"><input type="button"
+													name="rock_button" class="button button_3_in_row_width"
+													value="Rock"
+													onclick="
+														mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
+														rockPaperScissors(0);
+													"></input>
+												</td>
+												<td class="alignC"><input type="button"
+													name="paper_button" class="button button_3_in_row_width"
+													value="Paper"
+													onclick="
+														mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
+														rockPaperScissors(1);
+													"></input>
+												</td>
+												<td class="alignL"><input type="button"
+													name="scissors_button" class="button button_3_in_row_width"
+													value="Scissors"
+													onclick="
+														mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
+														rockPaperScissors(2);
+													"></input>
+												</td>
+											</tr>
+										</table>
+									</div>
+
+									<div id="dynLoop_content_2" class="hide">
+										<div class="checkable_list_item">
+											<table style="width: 100%;" cellpadding="0" cellspacing="0">
+												<tr>
+													<td class="list_item_left_align">You chose</td>
+													<td class="list_item_right_align"><img id="player_img"
+														height="40" width="43" alt="My choice" /></td>
+												</tr>
+											</table>
+										</div>
+										<div class="checkable_list_item">
+											<table style="width: 100%;" cellpadding="0" cellspacing="0">
+												<tr>
+													<td class="list_item_left_align">Computer chose</td>
+													<td class="list_item_right_align"><img
+														id="opponent_img" height="40" width="43"
+														alt="Computers choice" /></td>
+												</tr>
+											</table>
+										</div>
+										<div class="text_block">
+											<table style="width: 100%;" cellpadding="0" cellspacing="0">
+												<tr>
+													<td id="game_over_txt" class="list_item_left_align"></td>
+												</tr>
+											</table>
+										</div>
+										<div class="fill">
+											<input type="button" name="nextGameBtn"
+												class="next_game_button" value="Next game"
+												onclick="
+												mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_1', 'show', 'hide');
+											" />
+										</div>
+									</div>
+
+								</div>
+							</div>
 							<!--End DynamicLooping mini app-->
 
 
@@ -1561,12 +1662,6 @@
 							</div>
 							<!--End ExpandableList mini app-->
 
-
-							<!--Settings mini app-->
-							<div id="settings" class="slider_section hide">Settings</div>
-							<!--End Settings mini app-->
-
-
 							<!--TabbedPages mini app-->
 							<div id="tabbedPages" class="slider_section hide">
 								<table cellpadding="0" cellspacing="0" class="width_filling"
@@ -1672,32 +1767,173 @@
 							</div>
 							<!--End TabbedPages mini app-->
 
+							<!--Picker mini app-->
+							<div id="picker" class="slider_section hide">
+								<div id="picker_content">
+									<div id="picker_button_content" class="show">
+										<div class="fill">
+											<input type="button" id="picker_button"
+											 class="button centered_button" value="Value is 1"
+											 onclick="
+											 	mwl.setGroupTarget('#picker_content', '#picker_list_content', 'show', 'hide');
+											" />
+										</div>
+									</div>
+
+									<div id="picker_list_content" class="hide">
+										<div class="list_section_header">Picker</div>
+										
+										<div class="text_list_item"
+										 onclick="setPickerValue(1);">Value is 1</div>
+										<div class="text_list_item"
+										 onclick="setPickerValue(2);">Value is 2</div>
+										<div class="text_list_item"
+										 onclick="setPickerValue(3);">Value is 3</div>
+										<div class="text_list_item"
+										 onclick="setPickerValue(4);">Value is 4</div>
+										<div class="text_list_item"
+										 onclick="setPickerValue(5);">Value is 5</div>
+										<div class="text_list_item"
+										 onclick="setPickerValue(6);">Value is 6</div>
+									</div>
+								</div>
+							</div>
+							<!--End Picker mini app-->
 
 							<!--TreeStructure mini app-->
 							<div id="treeStructure" class="slider_section hide">Tree
 								structure</div>
 							<!--End TreeStructure mini app-->
+
+
 							<!--FileUpload mini app-->
-							<div id="fileUpload" class="slider_section hide">File
-								upload</div>
+							<div id="fileUpload" class="slider_section hide">
+
+								<!-- FileUpload Control Content -->
+								<div id="fileUpload_content">
+									
+									<!-- Base view -->
+									<div id="fileUpload_base_view" class="show">
+										<div class="list_section_header">File upload - base view</div>
+										<div class="fill">
+											<input type="button" name="start_upload_btn"
+												class="button centered_button" value="Start upload flow"
+												onclick="
+													mwl.setGroupTarget('#fileUpload_content', '#fileUpload_select_view', 'show', 'hide');
+												" />
+										</div>
+									</div>
+
+									<!-- Select & Upload view -->
+									<div id="fileUpload_select_view" class="hide">
+										<div class="list_section_header">File upload - file select</div>
+										<div class="fill">
+											<!-- action="http://tilipitappi.com/upload.php" -->
+											<form action="http://www.oac.uci.edu/indiv/franklin/cgi-bin/values" method="post" enctype="multipart/form-data">
+												<input type="file" name="userfile" class="input_select" id="file" />
+												<input type="submit" value="UPLOAD" class="button upload_download_button"
+												onclick="
+													mwl.setGroupTarget('#fileUpload_content', '#fileUpload_base_view', 'show', 'hide');
+												" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
 							<!--End FileUpload mini app-->
+
+							<!--FileDownload mini app-->
+							<div id="fileDownload" class="slider_section hide">
+
+								<!-- FileDown Control Content -->
+								<div id="fileDownload_content">
+									<!-- Base view -->
+									<div id="fileDownload_base_view" class="show">
+										<div class="list_section_header">File download - base view</div>
+										<div class="fill">
+											<input type="button" name="start_download_btn" class="button centered_button" value="Start download flow"
+											onclick="
+												mwl.setGroupTarget('#fileDownload_content', '#fileDownload_select_view', 'show', 'hide');
+											" />
+										</div>
+									</div>
+
+									<!-- Select & Download view -->
+									<div id="fileDownload_select_view" class="hide">
+										<div class="list_section_header">File download - file select</div>
+										<div class="fill image_grid">
+											<span onclick="
+												mwl.setGroupTarget('#fileDownload_content', '#fileDownload_details_view', 'show', 'hide');
+												setImageDetails('img1.jpg');
+											">
+												<img class="download_images" src="img/img1.jpg" alt="Mountain lake" />
+											</span>
+											<span onclick="
+												mwl.setGroupTarget('#fileDownload_content', '#fileDownload_details_view', 'show', 'hide');
+												setImageDetails('img2.jpg');
+											">
+												<img class="download_images" src="img/img2.jpg" alt="Desert" />
+											</span>
+											<span onclick="
+												mwl.setGroupTarget('#fileDownload_content', '#fileDownload_details_view', 'show', 'hide');
+												setImageDetails('img3.jpg');
+											">
+												<img class="download_images" src="img/img3.jpg" alt="Sunset church" />
+											</span>
+											<span onclick="
+												mwl.setGroupTarget('#fileDownload_content', '#fileDownload_details_view', 'show', 'hide');
+												setImageDetails('img4.jpg');
+											">
+												<img class="download_images" src="img/img4.jpg" alt="Crocodile lake" />
+											</span>
+										</div>
+									</div>
+									
+									<!-- Image details view -->
+									<div id="fileDownload_details_view" class="hide">
+										<div class="list_section_header">File download - Image details</div>
+										<div class="big_image_wrapper">
+											<img id="download_image" alt="Image to download" />
+										</div>
+										<div id="download_image_name" class="text_block">Placeholder.jpg</div>
+										<input id="download_button" type="submit" value="DOWNLOAD" class="button upload_download_button" />
+									</div>
+								</div>
+							</div>
+							<!--End FileUpload mini app-->
+
 							<!--PageTitleLink mini app-->
-							<div id="pageTitleLink" class="slider_section hide">Page
-								title link</div>
+							<div id="pageTitleLink" class="slider_section hide">
+								<div class="list_section_header">Press title link to main page</div>
+							</div>
 							<!--End PageTitleLink mini app-->
+
 							<!--Password mini app-->
 							<div id="password" class="slider_section hide">Password</div>
 							<!--End Password mini app-->
 
 
 							<!--ProgressIndicators mini app-->
-							<div id="progressIndicators" class="slider_section hide">Progress
-								indicators</div>
+							<div id="progressIndicators" class="slider_section hide">
+
+								<!-- ProgressIndicator Control Content -->
+								<div id="progressIndicator_content">
+									<!-- Base list view -->
+									<div id="progress_indicator_base_view" class="show">
+										<div class="list_section_header">Progress indicator</div>
+										<div class="text_list_item"
+										 onclick="mwl.loadURL('http://www.nokia.com');">Web page loading</div>
+										<div class="text_list_item">Continuous use</div>
+										<div class="text_list_item">Determinate progress</div>
+										<div class="text_list_item">Indeterminate progress</div>
+									</div>
+								</div>
+							</div>
 							<!--End ProgressIndicators mini app-->
+
 							<!--Search mini app-->
 							<div id="search" class="slider_section hide">Search</div>
 							<!--End Search mini app-->
-
 
 							<!--SharingContent mini app-->
 							<div id="sharingContent" class="slider_section hide">Sharing

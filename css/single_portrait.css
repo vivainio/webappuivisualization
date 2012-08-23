@@ -12,6 +12,10 @@
 	-webkit-transition: margin-left 0.5s linear;
 }
 
+#navigateToggle {
+	background-color: gray
+}
+	
 .show_main {
 	margin-left: 0px;
 }
@@ -123,6 +127,12 @@
 	height: 40px;
 	background-image: url('../img/button_background.png');
 	color: #fff;
+}
+
+.checkbox {
+	height: 21px;
+	width: 21px;
+	background-image: url('../img/element_checkbox_selected.png');
 }
 
 .featured_list_item {
@@ -363,4 +373,68 @@
 
 .button_3_in_row_width{
 	width: 60px;	
+}
+
+/* Dynamic looping style definitions */
+.next_game_button {
+	height: 40px;
+	width: 80%;
+	margin-left: 10%;
+	background-image: url('../img/button_background.png');
+	color: #fff;
+}
+
+.list_item_center_align {
+	margin-left: 25%;
+	width: 50%;
+	height: 40px;
+}
+
+.list_item_left_align {
+	height: 40px;
+	text-align: left;
+}
+
+.list_item_right_align {
+	height: 40px;
+	text-align: right;
+}
+
+/* Upload & Download Miniapps style definitions */
+.centered_button {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10%
+}
+
+.upload_download_button {
+	width: 60%;
+	margin-left: 3%;
+	margin-top: 5%;
+} 
+
+.input_select {
+	height: 30px;		
+	margin-top: 5%;
+	margin-left: 3%;
+	margin-right: 3%;
+	color: black;
+}
+
+.image_grid {
+	margin-top: 10%;
+	margin-left: 5%;
+}
+
+.download_images {
+	border: 2px solid white;
+	width: 100px;
+	height: 100px;
+}
+
+.big_image_wrapper {	
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: auto;
+	margin-right: auto;
 }

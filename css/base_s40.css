@@ -12,6 +12,10 @@ body {
 	display: none;
 }
 
+.fill {
+	width: 100%
+}
+	
 .show_table_row {
 	display: table-row;
 }
