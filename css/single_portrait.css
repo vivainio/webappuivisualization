@@ -32,10 +32,6 @@
 	display: none;
 }
 
-.width_filling{
-	width: 100%;	
-}
-
 .show_app_name {
 	margin-left: 0px;
 }
@@ -247,12 +243,14 @@
 
 .miniapp_section {
 	padding: 8px;
+	padding-top: 0px;
 }
 
 .text_input_cell {
 	width: 75%;
 	height: 40px;
 	vertical-align: middle;
+	padding-right: 10px;
 }
 
 .text_input_with_button_cell {
@@ -265,6 +263,10 @@
 	height: 30px;
 	padding-left: 8px;
 	padding-right: 8px;
+}
+
+.carousel_back_forward_button {
+	width: 20px;
 }
 
 .carousel_in_item_height {
@@ -364,15 +366,20 @@
 .category_name {
 	font-weight: bold;
 	font-size: 14px;
+	margin-top: 10px;
 	margin-bottom: 8px;
 }
 
-.button_2_in_row_width{
+.button_1_width {
+	width: 60%;
+}
+	
+.button_2_in_row_width {
 	width: 100px;	
 }
 
-.button_3_in_row_width{
-	width: 60px;	
+.button_3_in_row_width {
+	width: 60px;
 }
 
 /* Dynamic looping style definitions */
