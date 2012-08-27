@@ -43,3 +43,42 @@ function setPickerValue(newValue) {
 	mwl.setGroupTarget('#picker_content', '#picker_button_content', 'show', 'hide');
 	document.getElementById("picker_button").value = "Value is " + newValue;
 }
+
+function generateTreeView(pagelevel, index1, index2) {
+	var pageCount = 4;
+	var pageNames = ["A", "B", "C", "D"];
+	
+	var treeStructureContainer = document.getElementById("treeStructure");
+	treeStructureContainer.innerHTML = "";
+	
+	var headerstr = '<div class="list_section_header">Tree ';
+	var outputstr = '<div id="tree_page_content" class="show">';
+	
+	if (pagelevel === 0) {
+		for (var i = 0; i < pageCount ; i++) {
+			outputstr += '<div class="text_list_item"'
+					  + 'onclick="generateTreeView(1,' + i + ',' + '0' + ')">'
+					  + 'Item ' + (i+1) + '</div>';
+		}
+	} else if (pagelevel === 1) {
+		headerstr += '> Item ' + (index1+1);
+		for (var i = 0; i < pageCount ; i++) {
+			outputstr += '<div class="text_list_item"'
+					  + 'onclick="generateTreeView(2,' + index1 + ',' + i + ')">'
+					  + 'Item ' + pageNames[i] + '</div>';
+		}
+	} else if (pagelevel === 2) {
+		headerstr += '> Item ' + (index1+1) + ' > ' + pageNames[index2];
+		outputstr += '<div class="text_block">'
+				  + 'Content item ' + (index1+1)
+				  + ' - ' + pageNames[index2] + '</div>';
+    } else {
+    	// Erraneous situation.
+    }
+	// Close the header string
+	headerstr += '</div>';
+    
+    treeStructureContainer.innerHTML += headerstr;
+    treeStructureContainer.innerHTML += outputstr;
+}
+

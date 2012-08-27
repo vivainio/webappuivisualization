@@ -445,3 +445,20 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.share_text_block {
+	font-size: 22px;
+	height: 190px;
+}
+
+#share_title {
+	width: 40%;
+	font-size: 18px;
+}
+
+.share_table {
+	width: 94%;
+	margin-left: 3%;
+	margin-right: 3%;
+	border: 1px solid black;
+}

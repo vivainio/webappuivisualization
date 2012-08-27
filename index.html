@@ -195,6 +195,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
+										generateTreeView(0, 0);
 										mwl.setGroupTarget('#appsSection','#treeStructure', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -1746,6 +1747,7 @@
 							</div>
 							<!--End ExpandableList mini app-->
 
+
 							<!--TabbedPages mini app-->
 							<div id="tabbedPages" class="slider_section hide">
 								<table cellpadding="0" cellspacing="0" class="fill"
@@ -1770,7 +1772,6 @@
 								</table>
 
 								<!-- Tab Control Content -->
-
 								<div id="tabbedPagesTabControlContent">
 
 									<!-- First tab content -->
@@ -1851,6 +1852,7 @@
 							</div>
 							<!--End TabbedPages mini app-->
 
+
 							<!--Picker mini app-->
 							<div id="picker" class="slider_section hide">
 								<div id="picker_content">
@@ -1884,9 +1886,12 @@
 							</div>
 							<!--End Picker mini app-->
 
+
 							<!--TreeStructure mini app-->
-							<div id="treeStructure" class="slider_section hide">Tree
-								structure</div>
+							<div id="treeStructure" class="slider_section hide">
+								<!-- NOTE: The tree view content is being loaded
+								from within the utils.js's generateTreeView() method! -->
+							</div>
 							<!--End TreeStructure mini app-->
 
 
@@ -1925,6 +1930,7 @@
 								</div>
 							</div>
 							<!--End FileUpload mini app-->
+
 
 							<!--FileDownload mini app-->
 							<div id="fileDownload" class="slider_section hide">
@@ -1986,11 +1992,13 @@
 							</div>
 							<!--End FileUpload mini app-->
 
+
 							<!--PageTitleLink mini app-->
 							<div id="pageTitleLink" class="slider_section hide">
 								<div class="list_section_header">Press title link to main page</div>
 							</div>
 							<!--End PageTitleLink mini app-->
+
 
 							<!--Password mini app-->
 							<div id="passwords" class="slider_section hide">Passwords</div>
@@ -2015,14 +2023,36 @@
 							</div>
 							<!--End ProgressIndicators mini app-->
 
+
 							<!--Search mini app-->
 							<div id="search" class="slider_section hide">Search</div>
 							<!--End Search mini app-->
 
+
 							<!--SharingContent mini app-->
-							<div id="sharingContent" class="slider_section hide">Sharing
-								content</div>
+							<div id="sharingContent" class="slider_section hide">
+								<div class="list_section_header">Sharing</div>
+								<div class="text_block share_text_block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								</div>
+								<table class="share_table" cellspacing="5" cellpadding="0">
+									<tr>
+										<td id="share_title">Share</td>
+										<td class="alignR">
+											<a href="sms:?body=LoremIpsumDolorSitAmet">
+												<img src="img/share_sms.png" />
+											</a>
+										</td>
+										<td class="alignR">
+											<a href="http://www.facebook.com/sharer.php?u=LoremIpsumDolorSitAmet">				
+												<img src="img/share_facebook.png" />
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
 							<!--End SharingContent mini app-->
+
 						</div>
 					</td>
 				</tr>

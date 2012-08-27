@@ -20,6 +20,10 @@ body {
 	width: 100%
 }
 
+.fillHeight {
+	height: 100%
+}
+
 .show_table_row {
 	display: table-row;
 }
