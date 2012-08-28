@@ -3,15 +3,13 @@
     
     <name short="MiniApps">MiniApps</name>    
 
-    <description>
-       
-    </description>
+    <description>S40 Mini Web Apps</description>
     
     <!-- Note: Author href MUST BE Url encoded 
         @see http://en.wikipedia.org/wiki/Percent-encoding -->       
     <icon src="icon.png"/>
 
-    <content src="index.html"/>
+    <content src="index.html"></content>
     
     <author email="john.doe@example.com" href="http://www.example.com">
         John Doe
@@ -21,5 +19,7 @@
 	   
     </license>
     
-   	<feature name="nokia://s40.nokia.com/SAWRT/1.5" required="true" />
+    <preference name="apikey" value="h2232ede2ttt21" readonly = "false"/>
+                
+   	<feature name="nokia://s40.nokia.com/SAWRT/2.0" required="true" />
 </widget>

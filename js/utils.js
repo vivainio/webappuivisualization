@@ -82,3 +82,32 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
     treeStructureContainer.innerHTML += outputstr;
 }
 
+// Save data to the CLOOOUD :O.
+function saveCredentials() {
+	var username = document.getElementById("usernameEntry").value;
+	var password = document.getElementById("passwordEntry").value;
+	
+	// Check, if the username already has an associated password.
+	var msgText = "";
+	if (widget.preferences.getItem("username") === username) {
+		msgText = "Would you like to replace the currently saved password";
+	} else {
+		msgText = "Save this password?";
+	}
+
+	if (window.confirm(msgText)) {
+		widget.preferences.setItem("username", username);
+		widget.preferences.setItem("password", password);
+		mwl.setGroupTarget('#passwords_content', '#password_login_view', 'show', 'hide');
+	}
+
+	// Echo the stored data.
+//	alert("username = " + widget.preferences.getItem("username")
+//			+ " \npassword = " + widget.preferences.getItem("password"));	
+}
+
+// Clears all the key - value pairs from the CLOOOUD :O.
+function resetCredentials() {
+	widget.preferences.clear();
+	mwl.setGroupTarget('#passwords_content', '#password_query_view', 'show', 'hide');
+}
