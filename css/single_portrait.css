@@ -462,3 +462,14 @@
 	margin-right: 3%;
 	border: 1px solid black;
 }
+
+.title_link_header {
+	background-color: #ced3c6;
+	color: white;
+	height: 20px;
+	padding-left: 12px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	border-bottom: 1px #e7e7e7 solid;
+}

@@ -44,11 +44,11 @@ function setPickerValue(newValue) {
 	document.getElementById("picker_button").value = "Value is " + newValue;
 }
 
-function generateTreeView(pagelevel, index1, index2) {
+function generateTreeView(elementId, pagelevel, index1, index2) {
 	var pageCount = 4;
 	var pageNames = ["A", "B", "C", "D"];
 	
-	var treeStructureContainer = document.getElementById("treeStructure");
+	var treeStructureContainer = document.getElementById(elementId);
 	treeStructureContainer.innerHTML = "";
 	
 	var headerstr = '<div class="list_section_header">Tree ';
@@ -57,14 +57,14 @@ function generateTreeView(pagelevel, index1, index2) {
 	if (pagelevel === 0) {
 		for (var i = 0; i < pageCount ; i++) {
 			outputstr += '<div class="text_list_item"'
-					  + 'onclick="generateTreeView(1,' + i + ',' + '0' + ')">'
+					  + 'onclick="generateTreeView(\'' + elementId + '\',1,' + i + ',' + '0' + ')">'
 					  + 'Item ' + (i+1) + '</div>';
 		}
 	} else if (pagelevel === 1) {
 		headerstr += '> Item ' + (index1+1);
 		for (var i = 0; i < pageCount ; i++) {
 			outputstr += '<div class="text_list_item"'
-					  + 'onclick="generateTreeView(2,' + index1 + ',' + i + ')">'
+					  + 'onclick="generateTreeView(\'' + elementId + '\',2,' + index1 + ',' + i + ')">'
 					  + 'Item ' + pageNames[i] + '</div>';
 		}
 	} else if (pagelevel === 2) {

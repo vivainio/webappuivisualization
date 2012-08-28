@@ -195,7 +195,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
-										generateTreeView(0, 0);
+										generateTreeView('treeStructure', 0, 0, 0);
 										mwl.setGroupTarget('#appsSection','#treeStructure', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -226,6 +226,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
+										generateTreeView('pageTitleLink_content', 0, 0, 0);
 										mwl.setGroupTarget('#appsSection','#pageTitleLink', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -1995,7 +1996,11 @@
 
 							<!--PageTitleLink mini app-->
 							<div id="pageTitleLink" class="slider_section hide">
-								<div class="list_section_header">Press title link to main page</div>
+								<div class="title_link_header" 
+									 onclick="
+									 	generateTreeView('pageTitleLink_content',0,0,0);
+									 ">Press title link to main page</div>
+								<div id="pageTitleLink_content" class=""></div>
 							</div>
 							<!--End PageTitleLink mini app-->
 
