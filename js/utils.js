@@ -41,6 +41,7 @@ function setImageDetails(fileName) {
 
 function setPickerValue(newValue) {
 	mwl.setGroupTarget('#picker_content', '#picker_button_content', 'show', 'hide');
+	mwl.setGroupTarget('#navigateToggle', '#miniappGoHomeToggle', 'show', 'hide');
 	document.getElementById("picker_button").value = "Value is " + newValue;
 }
 
@@ -100,10 +101,6 @@ function saveCredentials() {
 		widget.preferences.setItem("password", password);
 		mwl.setGroupTarget('#passwords_content', '#password_login_view', 'show', 'hide');
 	}
-
-	// Echo the stored data.
-//	alert("username = " + widget.preferences.getItem("username")
-//			+ " \npassword = " + widget.preferences.getItem("password"));	
 }
 
 // Clears all the key - value pairs from the CLOOOUD :O.
