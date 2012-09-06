@@ -45,9 +45,17 @@ function setPickerValue(newValue) {
 	document.getElementById("picker_button").value = "Value is " + newValue;
 }
 
+/**
+ * Function for generating HTML structure for the tree view mini app.
+ * 
+ * 	 elementId - HTML element id to which the output is appended.
+ *   pageLevel - The current depth of the tree
+ *   index1 - The item index selected from the tree's first level.
+ *   index2 - The item index selected from the tree's second level.
+ */
 function generateTreeView(elementId, pagelevel, index1, index2) {
-	var pageCount = 4;
 	var pageNames = ["A", "B", "C", "D"];
+	var pageCount = pageNames.length;
 	
 	var treeStructureContainer = document.getElementById(elementId);
 	treeStructureContainer.innerHTML = "";
@@ -73,14 +81,14 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
 		outputstr += '<div class="text_block">'
 				  + 'Content item ' + (index1+1)
 				  + ' - ' + pageNames[index2] + '</div>';
-    } else {
-    	// Erraneous situation.
-    }
+	} else {
+		// Handle error here.
+	}
 	// Close the header string
 	headerstr += '</div>';
-    
-    treeStructureContainer.innerHTML += headerstr;
-    treeStructureContainer.innerHTML += outputstr;
+	
+	treeStructureContainer.innerHTML += headerstr;
+	treeStructureContainer.innerHTML += outputstr;
 }
 
 // Save data to the CLOOOUD :O.
