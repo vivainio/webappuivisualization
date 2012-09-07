@@ -119,6 +119,30 @@
 	padding-left: 8px;
 }
 
+.previous_button {
+	width: 32%;
+	height: 30px;
+	background-image: url('../img/prev.png');
+}
+
+.play_button {
+	width: 32%;
+	height: 30px;
+	background-image: url('../img/play.png');
+}
+
+.pause_button {
+	width: 32%;
+	height: 30px;
+	background-image: url('../img/pause.png');
+}
+
+.next_button {
+	width: 33%;
+	height: 30px;
+	background-image: url('../img/next.png');
+}
+
 .button {
 	height: 40px;
 	background-image: url('../img/button_background.png');
@@ -310,6 +334,12 @@
 	overflow: hidden;
 }
 
+.carousel_buttons_bar {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+}
+
 .carousel_image {
 	width: 240px;
 	height: 250px;
@@ -333,11 +363,6 @@
 
 .carousel_img4 {
 	margin-left: -960px;
-}
-
-.carousel_slideshow_button {
-	width: 76px;
-	height: 30px;
 }
 
 .strip_carousel_in_item {
