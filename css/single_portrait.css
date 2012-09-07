@@ -72,6 +72,16 @@
 	margin-right: 6px;
 }
 
+.fancy_list_item {
+	width: 92%;
+}
+
+.fancy_list_item_image {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 3px;
+}
+
 .tabbed_pages_picture_list_item {
 	background-color: #ced3c6;
 	padding: 0px 8px 0px 8px;
