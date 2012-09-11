@@ -16,7 +16,28 @@
 		<div id="titlebar" class="header_background">
 			<table class="header_table" cellpadding="0" cellspacing="0" summary="Default Header Table">
 				<tr>
-					<td><div id="title">MiniApps</div></td>
+					<td>
+						<div class="title_slider">
+							<table id="search_title" class="title_slider_section show_title_main">
+								<tr>
+									<td><div id="title" class="title_slider_section">MiniApps</div></td>
+									<td>
+										<img src="img/top_menu.png" height="35" width="35" alt="Home"
+										onclick="
+											mwl.switchClass('#search_title', 'show_title_search', 'show_title_main');
+											mwl.setGroupTarget('#navigateToggle', '#home', 'show', 'hide');
+											mwl.switchClass('#slider', 'show_miniapp', 'show_main');
+											mwl.scrollTo('#main');"/>
+									</td>
+									<td>
+										<div class="search_text_entry">
+											<input id="search_input" type="text" name="search_params" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
 					<td width="40">
 						<div id="navigateToggle">
 							<div id="home" class="show"></div>
@@ -43,7 +64,13 @@
 								<img src="img/top_back.png" height="40" width="43" alt="Home" 
 									onclick="
 										mwl.setGroupTarget('#navigateToggle', '#miniappGoHomeToggle', 'show', 'hide');
-								mwl.setGroupTarget('#progressIndicator_content', '#progress_indicator_base_view', 'show', 'hide');"/>
+										mwl.setGroupTarget('#progressIndicator_content', '#progress_indicator_base_view', 'show', 'hide');"/>
+							</div>
+							<div id="search_button" class="hide">
+								<img src="img/top_search.png" height="40" width="43" alt="Search" 
+									onclick="
+										mwl.switchClass('#search_title', 'show_title_main', 'show_title_search');
+										createSearchList();"/>
 							</div>
 						</div>
 					</td>
@@ -263,9 +290,10 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
+										createSearchList();
 										mwl.setGroupTarget('#appsSection','#search', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
-										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+										mwl.setGroupTarget('#navigateToggle', '#search_button', 'show', 'hide');">
 									<img src="img/list_search.png" height="24" width="24"
 										alt="smile" class="picture_list_item_image"></img>
 									<span class="valignMdl">Search</span>
@@ -2500,7 +2528,10 @@
 
 
 							<!--Search mini app-->
-							<div id="search" class="slider_section hide">Search</div>
+							<div id="search" class="slider_section hide">
+							<!-- NOTE: The tree view content is being loaded
+								from within the utils.js's generateTreeView() method! -->
+							</div>
 							<!--End Search mini app-->
 
 

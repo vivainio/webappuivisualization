@@ -15,7 +15,7 @@
 #navigateToggle {
 	background-color: gray
 }
-	
+
 .show_main {
 	margin-left: 0px;
 }
@@ -34,6 +34,42 @@
 
 .show_app_name {
 	margin-left: 0px;
+}
+
+/* Search related style definitions */
+.title_slider {
+	overflow: hidden;
+	width: 197px;
+}
+
+.show_title_main {
+	margin-left: 0px;
+}
+
+.show_title_search {
+	margin-left: -197px;
+}
+
+.title_slider_section {
+	width: 197px;
+	-webkit-transition: margin-left 0.5s linear;
+}
+
+.search_button {
+	width: 40px;
+	height: 43px;
+	background-image: url('../img/top_search.png');
+}
+
+.search_text_entry {
+	width: 90%;
+	padding-right: 4px;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+#search_input {
+	width: 100%;
 }
 
 /* List Item css starts*/
@@ -130,26 +166,30 @@
 }
 
 .previous_button {
-	width: 32%;
-	height: 30px;
+	width: 31%;
+	height: 23px;
+	margin: 1px;
 	background-image: url('../img/prev.png');
 }
 
 .play_button {
-	width: 32%;
-	height: 30px;
+	width: 31%;
+	height: 23px;
+	margin: 1px;
 	background-image: url('../img/play.png');
 }
 
 .pause_button {
-	width: 32%;
-	height: 30px;
+	width: 31%;
+	height: 23px;
+	margin: 1px;
 	background-image: url('../img/pause.png');
 }
 
 .next_button {
-	width: 33%;
-	height: 30px;
+	width: 31%;
+	height: 23px;
+	margin: 1px;
 	background-image: url('../img/next.png');
 }
 

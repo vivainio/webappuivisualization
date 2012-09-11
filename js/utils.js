@@ -45,6 +45,54 @@ function setPickerValue(newValue) {
 	document.getElementById("picker_button").value = "Value is " + newValue;
 }
 
+function _generateSearchItems() {
+	var searchItems = [];
+	var ItemCount = 15;
+	// Generate the items.
+	for ( var i = 0; i < ItemCount; i++) {
+		searchItems.push("Item " + (i+1));
+	}
+	
+	return searchItems;
+}
+
+/**
+ * Function for generating HTML structure for the Search mini app.
+ * 
+ *   Checks the search input field's value, and compares it against
+ *   the currently known items (i.e. the ones generated with the
+ *   _generateSearchItems() function). 
+ */
+function createSearchList() {
+	var allItems = _generateSearchItems();
+	var shownItems = [];
+	
+	// Fetch the user's input.
+	var searchTerm = document.getElementById("search_input").value;
+	console.log("search_input was: " + searchTerm);
+	
+	if (searchTerm) {
+		for (var i = 0; i < allItems.length; i++) {
+			var item = allItems[i];
+			if (item.indexOf(searchTerm) != -1) {
+				shownItems.push(item);
+			}
+		}
+	} else {
+		shownItems = allItems;
+	}
+
+	var outputstr = '<div id="tree_page_content" class="show">';
+	for ( var i = 0; i < shownItems.length; i++) {
+		outputstr += '<div class="text_list_item" onclick="">'
+			  + shownItems[i] + '</div>';
+	}
+	outputstr += '</div>';
+
+	var searchContainer = document.getElementById("search");
+	searchContainer.innerHTML = outputstr;
+}
+
 /**
  * Function for generating HTML structure for the tree view mini app.
  * 
