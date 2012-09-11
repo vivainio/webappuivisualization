@@ -171,6 +171,15 @@
 										class="picture_list_item_image"></img>
 									<span class="valignMdl">Text fields</span>
 								</div>
+								<div class="picture_list_item"
+									 onclick="
+										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
+										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+									<img src="img/top_tips.png" height="24" width="24"
+										alt="smile" class="picture_list_item_image"></img>
+									<span class="valignMdl">Information</span>
+								</div>
 							</div>
 
 							<div id="tab_2_content" class="hide slider_section">
@@ -237,6 +246,15 @@
 									<img src="img/list_tree.png" height="24" width="24" alt="smile"
 										class="picture_list_item_image"></img>
 									<span class="valignMdl">Tree structure</span>
+								</div>
+								<div class="picture_list_item"
+									 onclick="
+										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
+										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+									<img src="img/top_tips.png" height="24" width="24"
+										alt="smile" class="picture_list_item_image"></img>
+									<span class="valignMdl">Information</span>
 								</div>
 							</div>
 							
@@ -306,6 +324,15 @@
 									<img src="img/list_share.png" height="24" width="24"
 										alt="smile" class="picture_list_item_image"></img>
 									<span class="valignMdl">Sharing content</span>
+								</div>
+								<div class="picture_list_item"
+									 onclick="
+										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
+										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+									<img src="img/top_tips.png" height="24" width="24"
+										alt="smile" class="picture_list_item_image"></img>
+									<span class="valignMdl">Information</span>
 								</div>
 							</div>
 						</div>
@@ -2558,7 +2585,19 @@
 								</table>
 							</div>
 							<!--End SharingContent mini app-->
-
+							
+							<!--Information "mini app"-->
+							<div id="information" class="slider_section hide">
+								<div class="list_section_header">Information</div>
+								<div class="information_text_block">
+									Lorem ipsum dolor sit amet,
+									consectetur adipisicing elit, sed do eiusmod tempor incididunt
+									ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+									nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									commodo consequat.
+								</div>
+							</div>
+							<!--End Information mini app-->
 						</div>
 					</td>
 				</tr>
