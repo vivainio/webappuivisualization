@@ -39,6 +39,7 @@
 /* Search related style definitions */
 .title_slider {
 	overflow: hidden;
+	vertical-align: middle;
 	width: 197px;
 }
 
@@ -63,9 +64,9 @@
 
 .search_text_entry {
 	width: 90%;
-	padding-right: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
 	vertical-align: middle;
-	padding-right: 10px;
 }
 
 #search_input {
@@ -172,6 +173,13 @@
 	background-image: url('../img/prev.png');
 }
 
+.previous_button_high {
+	width: 18px;
+	height: 115px;
+	margin-left: 2px;
+	background-image: url('../img/carousel_in_item_previous.png');
+}
+
 .play_button {
 	width: 31%;
 	height: 23px;
@@ -191,6 +199,13 @@
 	height: 23px;
 	margin: 1px;
 	background-image: url('../img/next.png');
+}
+
+.next_button_high {
+	width: 18px;
+	height: 115px;
+	margin-right: 2px;
+	background-image: url('../img/carousel_in_item_next.png');
 }
 
 .button {
@@ -339,23 +354,19 @@
 	padding-right: 8px;
 }
 
-.carousel_back_forward_button {
-	width: 20px;
-}
-
 .carousel_in_item_height {
-	height: 110px;
+	height: 115px;
 }
 
 .carousel_in_item_container {
 	width: 180px;
-	height: 110px;
+	height: 115px;
 	overflow: hidden;
 }
 
 .carousel_in_item_image {
 	width: 180px;
-	height: 110px;
+	height: 115px;
 }
 
 .carousel_in_item_img0 {
