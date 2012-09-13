@@ -1930,19 +1930,16 @@
 												<td class="alignR">
 													<input type="button" name="rock_button" class="button button_3_in_row_width" value="Rock"
 														onclick="
-															mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
 															rockPaperScissors(0);" />
 												</td>
 												<td class="alignC">
 													<input type="button" name="paper_button" class="button button_3_in_row_width" value="Paper"
 														onclick="
-															mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
 															rockPaperScissors(1);" />
 												</td>
 												<td class="alignL">
 													<input type="button" name="scissors_button" class="button button_3_in_row_width" value="Scissors"
 														onclick="
-															mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
 															rockPaperScissors(2);" />
 												</td>
 											</tr>
@@ -1955,7 +1952,7 @@
 												<tr>
 													<td class="list_item_left_align">You chose</td>
 													<td class="list_item_right_align">
-														<img id="player_img" height="40" width="43" alt="My choice" />
+														<img id="player_img" height="33" width="30" alt="My choice" />
 													</td>
 												</tr>
 											</table>
@@ -1965,7 +1962,7 @@
 												<tr>
 													<td class="list_item_left_align">Computer chose</td>
 													<td class="list_item_right_align">
-														<img id="opponent_img" height="40" width="43" alt="Computers choice" />
+														<img id="opponent_img" height="33" width="30" alt="Computers choice" />
 													</td>
 												</tr>
 											</table>
@@ -1980,7 +1977,8 @@
 										<div class="fill">
 											<input type="button" name="nextGameBtn" class="next_game_button" value="Next game"
 											 onclick="
-											 	mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_1', 'show', 'hide');" />
+												 mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_1', 'show', 'hide');
+											" />
 										</div>
 									</div>
 								</div>

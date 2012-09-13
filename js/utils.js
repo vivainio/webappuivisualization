@@ -25,6 +25,7 @@ function rockPaperScissors(playerChoice) {
 	document.getElementById("player_img").src = choiceImages[playerChoice];
 	document.getElementById("opponent_img").src = choiceImages[computerChoice];
 	document.getElementById("game_over_txt").innerHTML = winString;
+	mwl.setGroupTarget('#dynamicLooping_content', '#dynLoop_content_2', 'show', 'hide');
 }
 
 function setImageDetails(fileName) {
