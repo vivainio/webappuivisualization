@@ -430,7 +430,7 @@
 												<tr>
 													<td class="checkable_item_cell_left">Item 1</td>
 													<td class="checkable_item_cell_right">
-														<input type="radio" name="tab_group_1" checked="checked" />
+														<input type="radio" name="tab_group_1" checked />
 													</td>
 												</tr>
 											</table>
@@ -483,7 +483,7 @@
 												<tr>
 													<td class="checkable_item_cell_left">Item 1</td>
 													<td class="checkable_item_cell_right">
-														<input type="radio" name="tab_group_2" disabled="disabled" checked="checked" />
+														<input type="radio" name="tab_group_2" disabled="disabled" checked />
 													</td>
 												</tr>
 											</table>
@@ -536,7 +536,7 @@
 												<tr>
 													<td class="checkable_item_cell_left">Item 1-1</td>
 													<td class="checkable_item_cell_right">
-														<input type="radio" name="tab_group_3_1" checked="checked" />
+														<input type="radio" name="tab_group_3_1" checked />
 													</td>
 												</tr>
 											</table>
@@ -577,7 +577,7 @@
 												<tr>
 													<td class="checkable_item_cell_left">Item 2-1</td>
 													<td class="checkable_item_cell_right">
-														<input type="radio" name="tab_group_3_2" checked="checked" />
+														<input type="radio" name="tab_group_3_2" checked />
 													</td>
 												</tr>
 											</table>
@@ -663,7 +663,7 @@
 												<tr>
 													<td class="checkable_item_cell_left">Item 3</td>
 													<td class="checkable_item_cell_right">
-														<input type="checkbox" checked="checked"/>
+														<input type="checkbox" checked/>
 													</td>
 												</tr>
 											</table>
@@ -1009,7 +1009,7 @@
 												<td class="fancy_list_item">
 													<table class="fill" cellspacing="4" cellpadding="0">
 														<tr><td>Title 12</td><td class="alignR">12:37</td></tr>
-														<tr><td>Content 12</td><td class="alignR"><img src="img/orange_dot.png" /></td></tr>
+														<tr><td>Content 12</td><td class="alignR"><img src="img/yellow_dot.png" /></td></tr>
 													</table>
 												</td>
 											</tr>
@@ -1086,7 +1086,7 @@
 													<td class="fancy_list_item">
 														<table class="fill" cellspacing="4" cellpadding="0">
 															<tr><td>Title 12</td><td class="alignR">12:37</td></tr>
-															<tr><td>Content 12</td><td class="alignR"><img src="img/orange_dot.png" /></td></tr>
+															<tr><td>Content 12</td><td class="alignR"><img src="img/yellow_dot.png" /></td></tr>
 														</table>
 													</td>
 												</tr>
@@ -1314,7 +1314,7 @@
 														<td class="fancy_list_item">
 															<table class="fill" cellspacing="4" cellpadding="0">
 																<tr><td>Title 5-4</td><td class="alignR">12:37</td></tr>
-																<tr><td>Content 5-4</td><td class="alignR"><img src="img/orange_dot.png" /></td></tr>
+																<tr><td>Content 5-4</td><td class="alignR"><img src="img/yellow_dot.png" /></td></tr>
 															</table>
 														</td>
 													</tr>
@@ -1386,7 +1386,7 @@
 														<td class="fancy_list_item">
 															<table class="fill" cellspacing="4" cellpadding="0">
 																<tr><td>Title 6-4</td><td class="alignR">12:37</td></tr>
-																<tr><td>Content 6-4</td><td class="alignR"><img src="img/orange_dot.png" /></td></tr>
+																<tr><td>Content 6-4</td><td class="alignR"><img src="img/yellow_dot.png" /></td></tr>
 															</table>
 														</td>
 													</tr>
@@ -1456,6 +1456,7 @@
 											<div id="tabs_tab_2_2_content" class="hide">
 												<div class="list_section_header">tab 2 content</div>
 											</div>
+											<div class="information_text_block">Pick tabbar variant</div>
 										</div>
 
 										<input id="text_tabs2_button"
@@ -1547,6 +1548,7 @@
 											<div id="tabs_tab_3_3_content" class="hide">
 												<div class="list_section_header">tab 3 content</div>
 											</div>
+											<div class="information_text_block">Pick tabbar variant</div>
 										</div>
 
 										<input id="text_tabs3_button"
@@ -1658,6 +1660,7 @@
 											<div id="tabs_tab_4_4_content" class="hide">
 												<div class="list_section_header">tab 4 content</div>
 											</div>
+											<div class="information_text_block">Pick tabbar variant</div>
 										</div>
 
 										<input id="text_tabs4_button"
@@ -1759,8 +1762,9 @@
 										<table class="fill" cellpadding="0" cellspacing="0"
 											summary="Button Table">
 											<tr>
-												<td class="text_input_cell"><input type="text"
-													name="entry2" /></td>
+												<td class="text_input_cell">
+													<input type="text" name="entry2" />
+												</td>
 												<td><span>km</span>
 												</td>
 											</tr>
@@ -1773,9 +1777,10 @@
 										<table class="fill" cellpadding="0" cellspacing="0"
 											summary="Button Table">
 											<tr>
-												<td class="text_input_cell"><input type="text" name="entry2" />
+												<td class="text_input_cell">
+													<input type="text" name="entry2" />
 												</td>
-												<td>
+												<td onclick="">
 													<img src="img/header_search.png" height="40" width="43" alt="Home" />
 												</td>
 											</tr>
@@ -2559,8 +2564,8 @@
 
 							<!--Search mini app-->
 							<div id="search" class="slider_section hide">
-							<!-- NOTE: The tree view content is being loaded
-								from within the utils.js's generateTreeView() method! -->
+							<!-- NOTE: The Search content is being loaded
+								from within the utils.js's createSearchList() method! -->
 							</div>
 							<!--End Search mini app-->
 
