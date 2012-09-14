@@ -2488,8 +2488,16 @@
 										
 										<div class="fill">
 											<input type="button" id="sign_in_button"
-											 class="button centered_button" value="Sign In"
-											 onclick="saveCredentials();" />
+												class="button centered_button" value="Sign In"
+												onclick="saveCredentials();" />									 
+											<input type="button" id="sign_in_button"
+											 	class="button centered_button" value="Clear Password"
+											 	onclick="resetCredentials();" />
+											<input type="button" id="help_button"
+												class="button centered_button" value="Help"
+												onclick="
+													mwl.setGroupTarget('#passwords_content', '#password_help_view', 'show', 'hide');
+												" />
 										</div>
 									</div>
 									
@@ -2497,14 +2505,19 @@
 									<div id="password_login_view" class="hide">
 										<div class="list_section_header">Try different password 2nd time</div>
 										<div class="text_block">You are logged in.</div>
-										<div class="text_block">Clear the password by resetting the demo.</div>
-										<div class="fill">
-											<input type="button" id="reset_passwords_button"
-											 class="button centered_button" value="Reset Demo"
-											 onclick="resetCredentials();" />
-										</div>
+										<div class="text_block">Clear the password from main view.</div>
 									</div>
 									
+									<div id="password_help_view" class="hide">
+										<div class="list_section_header">Help</div>
+										<div class="information_text_block">
+											Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit, sed do eiusmod tempor incididunt
+											ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.
+										</div>
+									</div>
 								</div>
 							</div>
 							<!--End Password mini app-->
