@@ -42,7 +42,7 @@
 						<div id="navigateToggle">
 							<div id="home" class="show"></div>
 							<div id="miniappGoHomeToggle" class="hide">
-								<img src="img/top_menu.png" height="40" width="43" alt="Home"
+								<img src="img/top_back.png" height="40" width="43" alt="Home"
 									onclick="
 										mwl.setGroupTarget('#navigateToggle', '#home', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_miniapp', 'show_main');
@@ -54,11 +54,21 @@
 										mwl.setGroupTarget('#navigateToggle', '#miniappGoHomeToggle', 'show', 'hide');
 										mwl.setGroupTarget('#tabs', '#tab_views', 'show', 'hide');"/>
 							</div>
+							<div id="dynamic_looping_backButton" class="hide">
+								<img src="img/top_menu.png" height="40" width="43" alt="Home" 
+									onclick="
+										mwl.setGroupTarget('#navigateToggle', '#home', 'show', 'hide');
+										mwl.switchClass('#slider', 'show_miniapp', 'show_main');
+										mwl.scrollTo('#main');"/>
+							</div>
 							<div id="picker_backButton" class="hide">
 								<img src="img/top_back.png" height="40" width="43" alt="Home" 
 									onclick="
 										mwl.setGroupTarget('#navigateToggle', '#miniappGoHomeToggle', 'show', 'hide');
 										mwl.setGroupTarget('#picker_content', '#picker_button_content', 'show', 'hide');"/>
+							</div>
+							<div id="tree_backButton" class="hide">
+								<img src="img/top_back.png" height="40" width="43" alt="Home" />
 							</div>
 							<div id="continuous_use_backButton" class="hide">
 								<img src="img/top_back.png" height="40" width="43" alt="Home" 
@@ -205,7 +215,7 @@
 									 onclick="
 										mwl.setGroupTarget('#appsSection','#dynamicLooping', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
-										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+										mwl.setGroupTarget('#navigateToggle', '#dynamic_looping_backButton', 'show', 'hide');">
 									<img src="img/list_loop.png" height="23" width="22" alt="smile"
 										class="picture_list_item_image"></img>
 									<span class="valignMdl">Dynamic looping</span>

@@ -118,6 +118,7 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
 					  + 'onclick="generateTreeView(\'' + elementId + '\',1,' + i + ',' + '0' + ')">'
 					  + 'Item ' + (i+1) + '</div>';
 		}
+		mwl.setGroupTarget('#navigateToggle', '#miniappGoHomeToggle', 'show', 'hide');
 	} else if (pagelevel === 1) {
 		headerstr += '> Item ' + (index1+1);
 		for (var i = 0; i < pageCount ; i++) {
@@ -125,11 +126,13 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
 					  + 'onclick="generateTreeView(\'' + elementId + '\',2,' + index1 + ',' + i + ')">'
 					  + 'Item ' + pageNames[i] + '</div>';
 		}
+		setBackButton(elementId, pagelevel, index1);
 	} else if (pagelevel === 2) {
 		headerstr += '> Item ' + (index1+1) + ' > ' + pageNames[index2];
 		outputstr += '<div class="text_block">'
 				  + 'Content item ' + (index1+1)
 				  + ' - ' + pageNames[index2] + '</div>';
+		setBackButton(elementId, pagelevel, index1);
 	} else {
 		// Handle error here.
 	}
@@ -138,6 +141,14 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
 	
 	treeStructureContainer.innerHTML += headerstr;
 	treeStructureContainer.innerHTML += outputstr;
+}
+
+function setBackButton(elementId, pagelevel, index1) {
+	var treeBackButton = document.getElementById("tree_backButton");
+	treeBackButton.onclick = function() {
+		generateTreeView(elementId, pagelevel - 1, index1, 0); 
+	};
+	mwl.setGroupTarget('#navigateToggle', '#tree_backButton', 'show', 'hide');
 }
 
 // Save data to the CLOOOUD :O.
