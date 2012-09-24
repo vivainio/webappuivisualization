@@ -24,18 +24,6 @@
 	margin-left: -240px;
 }
 
-.show {
-	display: block;
-}
-
-.hide {
-	display: none;
-}
-
-.show_app_name {
-	margin-left: 0px;
-}
-
 /* Search related style definitions */
 .title_slider {
 	overflow: hidden;
@@ -136,8 +124,8 @@
 	font-weight: bold;
 	line-height: 20px;
 }
-
 /* List Item css ends*/
+
 .text_field_item {
 	font-size: 14px;
 	font-weight: bold;
@@ -239,6 +227,18 @@
 	font-size: 16px;
 }
 
+.category_table {
+	height: 40px;
+	width: 100%;
+}
+
+.category_name {
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
 .category_header {
 	height: 40px;
 	color: black;
@@ -259,7 +259,6 @@
 }
 
 /* Tab css starts*/
-
 .tab {
 	height: 40px;
 	text-align: center;
@@ -315,13 +314,9 @@
 	background-color: #ced3c6;
 	color: green;
 }
-
 /* Tab css ends*/
 
-.txtbold {
-	font-weight: bold
-}
-
+/* Main slider css starts */
 .slider_table {
 	width: 480px;
 }
@@ -334,7 +329,9 @@
 	padding: 8px;
 	padding-top: 0px;
 }
+/* Main slider css ends */
 
+/* Text input css starts */
 .text_input_cell {
 	width: 75%;
 	height: 40px;
@@ -353,7 +350,9 @@
 	padding-left: 8px;
 	padding-right: 8px;
 }
+/* Text input css ends */
 
+/* Carousel css starts */
 .carousel_in_item_height {
 	height: 115px;
 }
@@ -435,29 +434,10 @@
 	width: 1200px;
 	-webkit-transition: margin-left 0.5s linear;
 }
-
-.text_block {
-	padding: 8px;
-}
-
-.category {
-	border-bottom: 2px #fff solid
-}
-
-.category_table {
-	height: 40px;
-	width: 100%;
-}
-
-.category_name {
-	font-weight: bold;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 8px;
-}
+/* Carousel css ends */
 
 .button_1_width {
-	width: 60%;
+	width: 144px;
 }
 	
 .button_2_in_row_width {

@@ -113,3 +113,10 @@ body {
 	width: 197px;
 }
 
+.text_block {
+	padding: 8px;
+}
+
+.category {
+	border-bottom: 2px #fff solid
+}
