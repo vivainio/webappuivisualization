@@ -163,42 +163,42 @@
 	width: 31%;
 	height: 23px;
 	margin: 1px;
-	background-image: url('../img/prev.png');
+	background-image: url('../img/prev_ls.png');
 }
 
 .previous_button_high {
 	width: 18px;
 	height: 86px;
 	margin-left: 2px;
-	background-image: url('../img/carousel_in_item_previous.png');
+	background-image: url('../img/carousel_in_item_previous_ls.png');
 }
 
 .play_button {
 	width: 31%;
 	height: 23px;
 	margin: 1px;
-	background-image: url('../img/play.png');
+	background-image: url('../img/play_ls.png');
 }
 
 .pause_button {
 	width: 31%;
 	height: 23px;
 	margin: 1px;
-	background-image: url('../img/pause.png');
+	background-image: url('../img/pause_ls.png');
 }
 
 .next_button {
 	width: 31%;
 	height: 23px;
 	margin: 1px;
-	background-image: url('../img/next.png');
+	background-image: url('../img/next_ls.png');
 }
 
 .next_button_high {
 	width: 18px;
 	height: 86px;
 	margin-right: 2px;
-	background-image: url('../img/carousel_in_item_next.png');
+	background-image: url('../img/carousel_in_item_next_ls.png');
 }
 
 .button {
