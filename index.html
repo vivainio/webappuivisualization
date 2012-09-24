@@ -189,7 +189,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
-										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.setGroupTarget('#appsSection','#information_elements', 'show', 'hide');
 										mwl.scrollTo('#main');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -273,7 +273,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
-										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.setGroupTarget('#appsSection','#information_navigation', 'show', 'hide');
 										mwl.scrollTo('#main');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -328,13 +328,13 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
-										mwl.setGroupTarget('#appsSection','#progressIndicators', 'show', 'hide');
+										mwl.setGroupTarget('#appsSection','#openWebLink', 'show', 'hide');
 										mwl.scrollTo('#main');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
 									<img src="img/list_progress.png" height="23" width="22"
 										alt="smile" class="picture_list_item_image"></img>
-									<span class="valignMdl">Progress indicators</span>
+									<span class="valignMdl">Open web link</span>
 								</div>
 								<div class="picture_list_item"
 									 onclick="
@@ -359,7 +359,7 @@
 								</div>
 								<div class="picture_list_item"
 									 onclick="
-										mwl.setGroupTarget('#appsSection','#information', 'show', 'hide');
+										mwl.setGroupTarget('#appsSection','#information_patterns', 'show', 'hide');
 										mwl.scrollTo('#main');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
 										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
@@ -2556,56 +2556,20 @@
 							<!--End Password mini app-->
 
 
-							<!--ProgressIndicators mini app-->
-							<div id="progressIndicators" class="slider_section hide">
+							<!--Open web link mini app-->
+							<div id="openWebLink" class="slider_section hide">
 
 								<!-- ProgressIndicator Control Content -->
 								<div id="progressIndicator_content">
-									<!-- Base list view -->
-									<div id="progress_indicator_base_view" class="show">
-										<div class="list_section_header">Progress indicator</div>
-										
-										<div class="text_list_item"
-											 onclick="mwl.loadURL('http://www.nokia.com');">Web page loading</div>
-										
-										<div class="text_list_item"
-											onclick="
-												mwl.setGroupTarget('#progressIndicator_content', '#continuous_use_view', 'show', 'hide');
-												mwl.setGroupTarget('#navigateToggle', '#continuous_use_backButton', 'show', 'hide');
-											">Continuous use</div>
-										
-										<div class="text_list_item" 
-											onclick="
-												mwl.loadURL('http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img6.jpg');
-											">Determinate progress</div>
-										
-										<div class="text_list_item"
-											onclick="
-												mwl.loadURL('http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img6.jpg');
-											">Indeterminate progress</div>
-									</div>
-									
-									<!-- Image grid -->
-									<div id="continuous_use_view" class="hide">
-										<div class="list_section_header">Continuous use</div>
-										<div class="fill image_grid">
-											<span onclick="">
-												<img class="download_images" src="http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img1.jpg" alt="Mountain lake" />
-											</span>
-											<span onclick="">
-												<img class="download_images" src="http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img2.jpg" alt="Desert" />
-											</span>
-											<span onclick="">
-												<img class="download_images" src="http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img3.jpg" alt="Sunset church" />
-											</span>
-											<span onclick="">
-												<img class="download_images" src="http://projects.developer.nokia.com/webappsuivisualisation/raw-attachment/wiki/WikiStart/img4.jpg" alt="Crocodile lake" />
-											</span>
-										</div>
+								
+									<div class="fill">
+										<input type="button" id="open_web_link_button"
+										 class="button centered_button" value="Open web link"
+										 onclick="mwl.loadURL('http://www.nokia.com');" />
 									</div>
 								</div>
 							</div>
-							<!--End ProgressIndicators mini app-->
+							<!--End Open web link mini app-->
 
 
 							<!--Search mini app-->
@@ -2640,18 +2604,65 @@
 							</div>
 							<!--End SharingContent mini app-->
 							
-							<!--Information "mini app"-->
-							<div id="information" class="slider_section hide">
+							<!--Information "mini app" for Elements -->
+							<div id="information_elements" class="slider_section hide">
 								<div class="list_section_header">Information</div>
 								<div class="information_text_block">
-									Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit, sed do eiusmod tempor incididunt
-									ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-									nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-									commodo consequat.
+									<b>Information – Elements</b><br /><br />
+									<b>Buttons</b> show a variety of buttons grouped in a row. The group can have a headline and at maximum three buttons with different spacing in a row.<br /><br />
+									<b>Buttons – radio</b> demonstrate radio button groups. “Normal” tab shows a list with a single radio button group, “Inactive” tab displays an inactive radio button group, and “Grouped” tab shows two independent radio button groups, separated by a header. A radio button group requires always one item to be selected.<br /><br />
+									<b>Check boxes</b> demonstrate check box groups. “Normal” tab shows a list with a single check box group, “Inactive” tab displays an inactive check box group, and “Grouped” tab shows two independent check box groups, separated by a header. A check box group can have none, one, or multiple items selected at the same time.<br /><br />
+									<b>Lists</b> in this example are compiled of three different items: single line item; single line item with an icon; and two-row item with a title, content, time stamp and an indicator icon. A list can be without a separator (Normal), with a separator (Label), grouped (Table), or it can be organised with expanding headers/collapsing lists (Category).<br /><br />
+									<b>Tabs</b> illustrate six different examples. There are tabs with icons and tabs with text; there is an example of both cases with two, three and four tabs. The examples are chosen via the button in the content area. It opens a list containing the six choices.<br /><br />
+									<b>Text fields</b> may carry additional information, such as a unit of measurement. There can also be a button with an icon which uses the full height of the field area (search icon in the example), or an embedded button with text (Update button in the example).<br /><br />
+									<b>Basic navigation</b><br />
+									- Exit only via Options menu or red end key.<br />
+									- Back should be used for returning to the previous state if there is no other primary function.<br />
+									- Home should be used if back is not meaningful or if the back flow is not possible through the entire application, i.e. there is a primary action in a previous view preventing “back”. Home can be linked to the header or to the primary action.<br />
 								</div>
 							</div>
-							<!--End Information mini app-->
+							<!--End Information for Elements mini app-->
+							
+							<!--Information for Navigation mini apps -->
+							<div id="information_navigation" class="slider_section hide">
+								<div class="list_section_header">Information</div>
+								<div class="information_text_block">
+									<b>Information – Navigation</b><br /><br />
+									<b>Carousel, in-item</b> shows images so that they use only a part of the actual view. This could be, for example, an information page about a certain item containing technical data and images. It is only possible to jump to the next or previous image.<br /><br />
+									<b>Carousel, item</b> shows images so that they use the whole view. It is in practice a gallery where people can move to the next or previous image. It is also possible to show all images automatically one after another with a predefined delay between images (in the example this functionality can be started with Play).<br /><br />
+									<b>Dynamic looping</b> is demonstrated with the rock-paper-scissors game. Since the game logic requires a server, the application connects to the server automatically after people have selected one of the three choices. The app shows the server’s choice and the player’s choice. Since the previous results are not saved, back-stepping is not meaningful, as it would initiate a new server call every time. Therefore, people can just move forward to a new game or leave the example and return to the main menu.<br /><br />
+									<b>Expandable list</b> shows single line items organised into an expandable headers/collapsible list. The header expands/list collapses by tapping the related “Category” header.<br /><br />
+									<b>Picker</b> demonstrates the change of the value which is embedded into a button via a related selection list. Tapping the button opens the list. Selecting a value closes the list. People can cancel the selection by tapping the back button.<br /><br /> 
+									<b>Tabbed pages</b> illustrate the basic (horizontal) navigation for web apps. It means that all views are on the same hierarchical level. Back will return to the main view.<br /><br />
+									<b>Tree structure</b> is a simple drill-down structure with 3 hierarchy levels. Back brings people to the previous view. The drill-down path is shown as a breadcrumb in the content header.<br /><br />
+									<b>Basic navigation</b><br /> 
+									- Exit only via Options menu or red end key.<br />
+									- Back should be used for returning to the previous state if there is no other primary function.<br />
+									- Home should be used if back is not meaningful or if the back flow is not possible through the entire application, i.e. there is a primary action in a previous view preventing “back”. Home can be linked to the header or to the primary action.<br />
+								</div>
+							</div>
+							<!--End Information for Navigation mini app-->
+							
+							<!--Information for Pattern mini apps -->
+							<div id="information_patterns" class="slider_section hide">
+								<div class="list_section_header">Information</div>
+								<div class="information_text_block">
+									<b>Information – Patterns</b><br /><br />
+									<b>File upload</b> requires people to select the file to be uploaded (via an API). After that, people return to the upload view and confirm the upload process. Uploading is done by the browser. After upload completion, the application returns to the originating page.<br /><br />
+									<b>File download</b> requires people to select a file to be downloaded – in this case from a small gallery. After that, people move to the download view with a thumbnail of the image to be loaded, and they can confirm the download process. Downloading is done by the browser, and downloads can be found from the browser. After download completion, the application returns to the first page.<br /><br />
+									<b>Page title link</b> demonstrates how tapping the page title brings people back to the start view of this mini app. This pattern should be used in case the primary function is reserved for something else than “back” or “home” navigation.<br /><br />
+									<b>Passwords</b> show a standard login procedure. People can sign in for the first time and the application asks the user if it should automatically fill in the password next time. If the password is saved, but changed during a later login, the application asks to update the password. Help should always be shown in a Login/sign-in view to explain the relevant credentials and how to register for the service if necessary, and also how to retrieve a forgotten password.<br /><br />
+									<b>Open webpage</b> demonstrates a link to a new webpage outside the web app. The browser will return from the web page to the web app after people have finished browsing the web page.<br /><br />
+									<b>Search</b> shows how to find an item within a given list. Search is opened by tapping the search icon. The search bar is brought up and it is now possible to fill in a search string. In this example, try e.g. “1” to get a fair amount of results. After closing the keypad, it is necessary to tap the search icon again. Pressing the blue handle hides the search bar. People can return to the main view by pressing the title bar.<br /><br />
+									<b>Sharing</b> content illustrates that sharing links either opens a related web link (Facebook in the example), or an internal API for sending the content via SMS.<br /><br />
+									<b>Basic navigation</b><br /> 
+									- Exit only via Options menu or red end key.<br />
+									- Back should be used for returning to the previous state if there is no other primary function.<br />
+									- Home should be used if back is not meaningful or if the back flow is not possible through the entire application, i.e. there is a primary action in a previous view preventing “back”. Home can be linked to the header or to the primary action.<br />								
+								</div>
+							</div>
+							<!--End Information for Patterns mini app-->
+							
 						</div>
 					</td>
 				</tr>
