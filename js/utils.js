@@ -97,7 +97,7 @@ function createSearchList() {
 /**
  * Function for generating HTML structure for the tree view mini app.
  * 
- * 	 elementId - HTML element id to which the output is appended.
+ *   elementId - HTML element id to which the output is appended.
  *   pageLevel - The current depth of the tree
  *   index1 - The item index selected from the tree's first level.
  *   index2 - The item index selected from the tree's second level.
@@ -143,6 +143,9 @@ function generateTreeView(elementId, pagelevel, index1, index2) {
 	treeStructureContainer.innerHTML += outputstr;
 }
 
+/**
+ * Helper function for setting back button behaviour.
+ */
 function setBackButton(elementId, pagelevel, index1) {
 	var treeBackButton = document.getElementById("tree_backButton");
 	treeBackButton.onclick = function() {
