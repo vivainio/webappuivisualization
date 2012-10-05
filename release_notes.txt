@@ -5,6 +5,10 @@ The Series 40 Web Apps UI Visualisation Examples demonstrates using different
 kind of UI elements, navigational solutions and patterns that can be used
 as a part of a S40 web application.
 
+Please note that Nokia Browser version 2.0 or higher is required for the mini
+apps to run properly, as certain features (such as file uploading / downloading
+and WQVGA displays) aren't supported by older browser version.
+
 The mini app suite contains examples of the following components and patterns:
 
   Elements
