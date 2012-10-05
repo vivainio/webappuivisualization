@@ -20,7 +20,12 @@
 						<div class="title_slider">
 							<table id="search_title" class="title_slider_section show_title_main">
 								<tr>
-									<td><div id="title" class="title_slider_section">MiniApps</div></td>
+									<td id="titleToggle">
+										<div id="title" class="titleText title_slider_section">MiniApps</div>
+										<div id="titleLinkTitle" class="titleText title_slider_section hide"
+										onclick="generateTreeView('pageTitleLink_content', 0, 0, 0);
+											">MiniApps</div>
+									</td>
 									<td>
 										<img src="img/close_button.png" height="16" width="16" alt="Home"
 										onclick="
@@ -45,6 +50,7 @@
 								<img src="img/top_back.png" height="40" width="43" alt="Home"
 									onclick="
 										mwl.setGroupTarget('#navigateToggle', '#home', 'show', 'hide');
+										mwl.setGroupTarget('#titleToggle', '#title', 'show', 'hide');
 										mwl.switchClass('#slider', 'show_miniapp', 'show_main');
 										mwl.scrollTo('#main');"/>
 							</div>
@@ -310,7 +316,8 @@
 										mwl.setGroupTarget('#appsSection','#pageTitleLink', 'show', 'hide');
 										mwl.scrollTo('#main');
 										mwl.switchClass('#slider', 'show_main', 'show_miniapp');
-										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');">
+										mwl.setGroupTarget('#navigateToggle','#miniappGoHomeToggle', 'show', 'hide');
+										mwl.setGroupTarget('#titleToggle', '#titleLinkTitle', 'show', 'hide');">
 									<img src="img/list_link.png" height="23" width="22" alt="smile"
 										class="picture_list_item_image"></img>
 									<span class="valignMdl">Page title link</span>
@@ -2476,10 +2483,7 @@
 
 							<!--PageTitleLink mini app-->
 							<div id="pageTitleLink" class="slider_section hide">
-								<div class="title_link_header" 
-									 onclick="
-									 	generateTreeView('pageTitleLink_content',0,0,0);
-									 ">Press title link to main page</div>
+								<div class="title_link_header">Press title link to main page</div>
 								<div id="pageTitleLink_content" class=""></div>
 							</div>
 							<!--End PageTitleLink mini app-->
