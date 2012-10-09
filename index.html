@@ -2499,37 +2499,40 @@
 									<div id="password_query_view" class="show">
 										<div class="list_section_header">Try different password 2nd time</div>
 										
-										<div class="text_field_item">
-											<div>Username</div>
-											<div class="text_entry_with_label">
-												<table class="fill" cellpadding="0" cellspacing="0" summary="Button Table">
-													<tr>
-														<td class="text_input_cell">
-														<input type="text" id="usernameEntry" /></td>
-													</tr>
-												</table>
+										<form action="#">
+											<div class="text_field_item">
+												<div>Username</div>
+												<div class="text_entry_with_label">
+													<table class="fill" cellpadding="0" cellspacing="0" summary="Button Table">
+														<tr>
+															<td class="text_input_cell">
+															<input type="text" id="name" /></td>
+														</tr>
+													</table>
+												</div>
 											</div>
-										</div>
-										
-										<div class="text_field_item">
-											<div>Password</div>
-											<div class="text_entry_with_label">
-												<table class="fill" cellpadding="0" cellspacing="0" summary="Button Table">
-													<tr>
-														<td class="text_input_cell">
-														<input type="password" id="passwordEntry" /></td>
-													</tr>
-												</table>
+											
+											<div class="text_field_item">
+												<div>Password</div>
+												<div class="text_entry_with_label">
+													<table class="fill" cellpadding="0" cellspacing="0" summary="Button Table">
+														<tr>
+															<td class="text_input_cell">
+															<input type="password" id="password" /></td>
+														</tr>
+													</table>
+												</div>
 											</div>
-										</div>
-										
+											
+											<input type="submit"
+													class="button centered_button" value="Sign In"
+													onclick="
+														getUsernameAndPassword();
+														mwl.setGroupTarget('#passwords_content', '#password_login_view', 'show', 'hide');
+													" />
+										</form>
+
 										<div class="fill">
-											<input type="button" id="sign_in_button"
-												class="button centered_button" value="Sign In"
-												onclick="saveCredentials();" />									 
-											<input type="button" id="sign_in_button"
-											 	class="button centered_button" value="Clear Password"
-											 	onclick="resetCredentials();" />
 											<input type="button" id="help_button"
 												class="button centered_button" value="Help"
 												onclick="

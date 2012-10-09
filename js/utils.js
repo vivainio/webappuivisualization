@@ -153,29 +153,10 @@ function setBackButton(elementId, pagelevel, index1) {
 	};
 	mwl.setGroupTarget('#navigateToggle', '#tree_backButton', 'show', 'hide');
 }
-
-// Save data to the CLOOOUD :O.
-function saveCredentials() {
-	var username = document.getElementById("usernameEntry").value;
-	var password = document.getElementById("passwordEntry").value;
+		
+function getUsernameAndPassword(){
+	var name = document.getElementById("name").value;
+	var password = document.getElementById("password").value;
 	
-	// Check, if the username already has an associated password.
-	var msgText = "";
-	if (widget.preferences.getItem("username") === username) {
-		msgText = "Would you like to replace the currently saved password";
-	} else {
-		msgText = "Save this password?";
-	}
-
-	if (window.confirm(msgText)) {
-		widget.preferences.setItem("username", username);
-		widget.preferences.setItem("password", password);
-		mwl.setGroupTarget('#passwords_content', '#password_login_view', 'show', 'hide');
-	}
-}
-
-// Clears all the key - value pairs from the CLOOOUD :O.
-function resetCredentials() {
-	widget.preferences.clear();
-	mwl.setGroupTarget('#passwords_content', '#password_query_view', 'show', 'hide');
+	console.log(name + " " + password);
 }
