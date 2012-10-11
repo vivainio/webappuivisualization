@@ -1,15 +1,21 @@
-Series 40 Web Apps Ui Visualisation Examples
+Series 40 Web Apps UI Visualisation Examples
 ============================================
 
-The Series 40 Web Apps UI Visualisation Examples demonstrates using different
-kind of UI elements, navigational solutions and patterns that can be used
-as a part of a S40 web application.
+Series 40 Web Apps UI Visualisation Examples demonstrates the use of different
+kinds of UI elements, navigational solutions, and patterns created with HTML, 
+CSS and JavaScript technologies. The example is meant for both designers and 
+developers: designers get an impression of how the components actually look 
+on the device, and developers learn how to use the Series 40 Web Apps UI 
+components.
 
-Please note that Nokia Browser version 2.0 or higher is required for the mini
-apps to run properly, as certain features (such as file uploading / downloading
-and WQVGA displays) aren't supported by older browser version.
+The application has been designed for Series 40 full touch, touch and type, 
+and most recent non-touch devices. Please note that Nokia Browser version 
+2.0 or higher is required for the application to run properly, as certain 
+features (such as file uploading or downloading and WQVGA displays) are not 
+supported by older browser versions.
 
-The mini app suite contains examples of the following components and patterns:
+The application suite contains examples of the following components and 
+patterns:
 
   Elements
   - Buttons - demonstrates different Button layouts.
@@ -29,12 +35,12 @@ The mini app suite contains examples of the following components and patterns:
   - Picker - demonstrates selecting a value for a button from a list.
   - Tabbed pages - demonstrates navigation within a web application using tabs.
   - Tree Structure - demonstrates how to create a dynamic, three levels deep
-    tree like navigational example.
+    tree-like navigational example.
   
   Patterns
   - File upload demonstrates selecting and sending a file with HTML forms.
   - File download demonstrates downloading and saving a file from a server.
-  - Page Title Link demonstrates tree structure like navigation, with added
+  - Page Title Link demonstrates tree structure -like navigation, with added
     title link.
   - Passwords example demonstrates using HTML password input and saving
     information to cloud.
@@ -50,6 +56,9 @@ In brief, this example application demonstrates:
     design patterns that can be used in Series 40 Web Apps.
   - Navigating between web app 'views'.
   - How to accommodate different input methods in a web application.
+
+Note that the application was created to demonstrate the UI components and does
+not have any actual engine implementation.
 
 The application is hosted in Nokia Developer Projects:
   - http://projects.developer.nokia.com/webappsuivisualisation
@@ -95,8 +104,8 @@ For more information on the implementation, visit the wiki page:
 | index.html              | Defines the HMTL structure of each of the mini    |
 |                         | apps. Also has most of MWL related functionality. |
 |-------------------------|---------------------------------------------------|
-| utils.js                | Contains the JavaScript functions implement the   |
-|                         | more complex application logic.                   |
+| utils.js                | Contains the JavaScript functions implementing    |
+|                         | the more complex application logic.               |
 |-------------------------|---------------------------------------------------|
 | single_portrait.css     | Files that have the CSS classes that define the   |
 | single_landscape.css    | application look and feel on different devices.   |
@@ -132,26 +141,28 @@ CSS3 features:
 -------------------------------------------------------------------------------
 
 Compatible with:
- - Nokia Asha Full Touch, Touch 'n Type & Non-Touch (landscape) devices
+ - Nokia Series 40 full touch, touch and type, and non-touch (landscape) 
+   devices with Nokia Browser 2.0 or newer
 
 Tested on:
- - Nokia 306
- - Nokia 303
- - Nokia 201
+ - Nokia Asha 306
+ - Nokia Asha 303
+ - Nokia Asha 201
 
 Developed with:
- - Nokia Web Developer Environment / Nokia WebTools 2.0
+ - Nokia Web Developer Environment / Nokia Web Tools 2.0
 
 
 3.2 Known issues and design limitations
 ---------------------------------------
 
-"Dynamic looping", "Search", "Tree View" and "Page Title Link" mini
-applications are sluggish:
- - Each of these mini apps have some logic, that has to be executed on the
-   Nokia proxy / intermediate server => causes a slow network transaction.
- -> If a business logic something else than just switching between CSS classes
-    (i.e. MWL functions) is required, then this is unavoidable.
+In Series 40 Web Apps, you can implement some business logic locally by 
+switching between CSS classes (i.e., MWL functions), but often logic needs to 
+be executed on the Nokia proxy side (intermediate server). Latency is then 
+unavoidable because data is transferred over a mobile network. In the UI 
+Visualisation Demos, most latency can be seen in "Dynamic looping", "Search", 
+"Tree View", and "Page Title Link" examples, because each of these examples 
+has some logic that has to be executed on the server. 
 
 
 4. Building, installing, and running the application
@@ -163,7 +174,7 @@ applications are sluggish:
 Check that you have the latest Nokia Web Developer Environment installed and
 the latest Nokia Browser version on the device.
 
-Nokia WebTools 2.0 or higher is required.
+Nokia Web Tools 2.0 or higher is required.
 Only Nokia Browser v2.0 and higher are supported.
 
 4.2 Using the Nokia Web Developer Environment
@@ -171,17 +182,17 @@ Only Nokia Browser v2.0 and higher are supported.
 
 You can preview and deploy the web application on a server by using the WDE.
 Open the project in the SDK, and select either local/cloud preview, or select
-the deploy Web App for deploying it on the web server.
+deploy Web App for deploying it on the web server.
 For more details about the Nokia Web Developer Environment and deploying apps,
 visit the Getting Started with Series 40 Web Apps at Nokia Developer
 (http://www.developer.nokia.com/Develop/Series_40/Series_40_web_apps/Getting_started/).
 
-4.3 Nokia S40 device
---------------------
+4.3 Nokia Series 40 device
+--------------------------
 
 Use the device's browser to navigate to the short URL given by the Nokia WDE
 upon deployment. The web browser will identify it as an web application and
-it is being loaded.
+it will be loaded on the device.
 
 It is also possible to use Bluetooth deployment, which will start the browser
 automatically to the correct URL address. This requires that the Bluetooth
