@@ -3,25 +3,8 @@
     tr
       td(valign='top')
         table.slider_section(cellpadding='0', cellspacing='0', summary='Tab Table')
-          tr
-            td#tab_1.tab.tab_3_tabs.tab_selected(onclick='\
-            mwl.setGroupTarget("#tab_control_content", "#tab_1_content", "show", "hide");\
-            mwl.switchClass("#tab_1", "tab_not_selected", "tab_selected");\
-            mwl.switchClass("#tab_2", "tab_selected", "tab_not_selected");\
-            mwl.switchClass("#tab_3", "tab_selected", "tab_not_selected");')
-              | Elements
-            td#tab_2.tab.tab_3_tabs.tab_not_selected(onclick='\
-            mwl.setGroupTarget("#tab_control_content", "#tab_2_content", "show", "hide");\
-            mwl.switchClass("#tab_1", "tab_selected", "tab_not_selected");\
-            mwl.switchClass("#tab_2", "tab_not_selected", "tab_selected");\
-            mwl.switchClass("#tab_3", "tab_selected", "tab_not_selected");')
-              | Navigation
-            td#tab_3.tab.tab_3_tabs_right.tab_not_selected(onclick='\
-            mwl.setGroupTarget("#tab_control_content", "#tab_3_content", "show", "hide");\
-            mwl.switchClass("#tab_1", "tab_selected", "tab_not_selected");\
-            mwl.switchClass("#tab_2", "tab_selected", "tab_not_selected");\
-            mwl.switchClass("#tab_3", "tab_not_selected", "tab_selected");')
-              | Patterns
+          include tabcontrol
+
         // End Tab Control
         // Tab Control Content
         #tab_control_content
