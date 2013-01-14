@@ -1,0 +1,52 @@
+#titlebar.header_background
+  table.header_table(cellpadding='0', cellspacing='0', summary='Default Header Table')
+    tr
+      td(height='40')
+        .title_slider
+          table#search_title.title_slider_section.show_title_main
+            tr
+              td#titleToggle
+                #title.titleText.title_slider_section MiniApps
+                #titleLinkTitle.titleText.title_slider_section.hide(onclick='generateTreeView("pageTitleLink_content", 0, 0, 0);\
+                ') MiniApps
+              td
+                img(src='img/close_button.png', height='16', width='16', alt='Home', onclick='\
+                mwl.switchClass("#search_title", "show_title_search", "show_title_main");\
+                mwl.setGroupTarget("#navigateToggle", "#home", "show", "hide");\
+                mwl.switchClass("#slider", "show_miniapp", "show_main");\
+                mwl.scrollTo("#main");')
+              td
+                .search_text_entry
+                  input#search_input(type='text', name='search_params')
+      td(width='40', height='40')
+        #navigateToggle
+          #home.show
+          #miniappGoHomeToggle.hide
+            img(src='img/top_back.png', height='40', width='43', alt='Home', onclick='\
+            mwl.setGroupTarget("#navigateToggle", "#home", "show", "hide");\
+            mwl.setGroupTarget("#titleToggle", "#title", "show", "hide");\
+            mwl.switchClass("#slider", "show_miniapp", "show_main");\
+            mwl.scrollTo("#main");')
+          #tabs_backButton.hide
+            img(src='img/top_back.png', height='40', width='43', alt='Home', onclick='\
+            mwl.setGroupTarget("#navigateToggle", "#miniappGoHomeToggle", "show", "hide");\
+            mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide");')
+          #dynamic_looping_backButton.hide
+            img(src='img/top_menu.png', height='40', width='43', alt='Home', onclick='\
+            mwl.setGroupTarget("#navigateToggle", "#home", "show", "hide");\
+            mwl.switchClass("#slider", "show_miniapp", "show_main");\
+            mwl.scrollTo("#main");')
+          #picker_backButton.hide
+            img(src='img/top_back.png', height='40', width='43', alt='Home', onclick='\
+            mwl.setGroupTarget("#navigateToggle", "#miniappGoHomeToggle", "show", "hide");\
+            mwl.setGroupTarget("#picker_content", "#picker_button_content", "show", "hide");')
+          #tree_backButton.hide
+            img(src='img/top_back.png', height='40', width='43', alt='Home')
+          #continuous_use_backButton.hide
+            img(src='img/top_back.png', height='40', width='43', alt='Home', onclick='\
+            mwl.setGroupTarget("#navigateToggle", "#miniappGoHomeToggle", "show", "hide");\
+            mwl.setGroupTarget("#progressIndicator_content", "#progress_indicator_base_view", "show", "hide");')
+          #search_button.hide
+            img(src='img/top_search.png', height='40', width='43', alt='Search', onclick='\
+            mwl.switchClass("#search_title", "show_title_main", "show_title_search");\
+            createSearchList();')

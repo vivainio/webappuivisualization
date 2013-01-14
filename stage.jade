@@ -1,0 +1,181 @@
+#stage
+  table#slider.show_main.slider_table(cellspacing='0', cellpadding='0', summary='Slider Table')
+    tr
+      td(valign='top')
+        table.slider_section(cellpadding='0', cellspacing='0', summary='Tab Table')
+          include tabcontrol
+
+        // End Tab Control
+        // Tab Control Content
+        #tab_control_content
+          #tab_1_content.show.slider_section
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#buttons", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_button.png', height='23', width='22', alt='smile')
+              span.valignMdl Buttons
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#radioButtons", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_radiobutton.png', height='23', width='22', alt='smile')
+              span.valignMdl Buttons - radio
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#checkBoxes", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_checkbox.png', height='23', width='22', alt='smile')
+              span.valignMdl Check boxes
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#lists", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_lists.png', height='23', width='22', alt='smile')
+              span.valignMdl Lists
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#tabs", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_tabs.png', height='23', width='22', alt='smile')
+              span.valignMdl Tabs
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#textFields", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_text.png', height='23', width='22', alt='smile')
+              span.valignMdl Text fields
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#information_elements", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_info.png', height='23', width='22', alt='smile')
+              span.valignMdl Information
+          #tab_2_content.hide.slider_section
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#carouselInItem", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_carousel_initem.png', height='23', width='22', alt='smile')
+              span.valignMdl Carousel, in-item
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#carouselItem", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_carousel_item.png', height='23', width='22', alt='smile')
+              span.valignMdl Carousel, item
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#dynamicLooping", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle", "#dynamic_looping_backButton", "show", "hide");')
+              img.picture_list_item_image(src='img/list_loop.png', height='23', width='22', alt='smile')
+              span.valignMdl Dynamic looping
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#expandableList", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_list_expand.png', height='23', width='22', alt='smile')
+              span.valignMdl Expandable list
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#picker", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_picker.png', height='23', width='22', alt='smile')
+              span.valignMdl Picker
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#tabbedPages", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_tabs.png', height='23', width='22', alt='smile')
+              span.valignMdl Tabbed pages
+            .picture_list_item(onclick='\
+            generateTreeView("treeStructure", 0, 0, 0);\
+            mwl.setGroupTarget("#appsSection","#treeStructure", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_tree.png', height='23', width='22', alt='smile')
+              span.valignMdl Tree structure
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#information_navigation", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_info.png', height='23', width='22', alt='smile')
+              span.valignMdl Information
+          #tab_3_content.hide.slider_section
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#fileUpload", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_upload.png', height='23', width='22', alt='smile')
+              span.valignMdl File upload
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#fileDownload", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_download.png', height='23', width='22', alt='smile')
+              span.valignMdl File download
+            .picture_list_item(onclick='\
+            generateTreeView("pageTitleLink_content", 0, 0, 0);\
+            mwl.setGroupTarget("#appsSection","#pageTitleLink", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");\
+            mwl.setGroupTarget("#titleToggle", "#titleLinkTitle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_link.png', height='23', width='22', alt='smile')
+              span.valignMdl Page title link
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#passwords", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.setGroupTarget("#passwords_content", "#password_query_view", "show", "hide");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_password.png', height='23', width='22', alt='smile')
+              span.valignMdl Passwords
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#openWebLink", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_progress.png', height='23', width='22', alt='smile')
+              span.valignMdl Open web link
+            .picture_list_item(onclick='\
+            createSearchList();\
+            mwl.setGroupTarget("#appsSection","#search", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle", "#search_button", "show", "hide");')
+              img.picture_list_item_image(src='img/list_search.png', height='23', width='22', alt='smile')
+              span.valignMdl Search
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#sharingContent", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_share.png', height='23', width='22', alt='smile')
+              span.valignMdl Sharing content
+            .picture_list_item(onclick='\
+            mwl.setGroupTarget("#appsSection","#information_patterns", "show", "hide");\
+            mwl.scrollTo("#main");\
+            mwl.switchClass("#slider", "show_main", "show_miniapp");\
+            mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+              img.picture_list_item_image(src='img/list_info.png', height='23', width='22', alt='smile')
+              span.valignMdl Information
+      td(valign='top')
+        include appsection        
