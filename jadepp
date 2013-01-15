@@ -143,6 +143,10 @@ function renderFile(path) {
     if (stat.isFile() && re.test(path)) {
       fs.readFile(path, 'utf8', function(err, str){
         if (err) throw err;
+        //jadelocals = {require : require, foo : "bar"}
+
+        options.require = require
+        
         options.filename = path;
         var fn = jade.compile(str, options);
         var extname = options.client ? '.js' : '.html';
