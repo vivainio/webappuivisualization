@@ -142,9 +142,9 @@ function renderFile(path) {
     // Found jade file
     if (stat.isFile() && re.test(path)) {
       fs.readFile(path, 'utf8', function(err, str){
-        if (err) throw err;
-        //jadelocals = {require : require, foo : "bar"}
+        if (err) throw err;        
 
+        // expose "require" in jade locals
         options.require = require
         
         options.filename = path;
