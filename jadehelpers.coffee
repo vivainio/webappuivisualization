@@ -1,3 +1,5 @@
+ll = console.log
+
 class TabBar
 	constructor: (@prefix, @numtabs) ->
 
@@ -40,15 +42,43 @@ selectTab = (num, maxnum) ->
 	console.log(rest)
 	return first + rest
 
-exports.toggleHide = (nodes...) ->
-	
+exports.ops = (full, ns = null) ->
+	full = "#navigateToggle: SELECT #home show hide; #slider: +show_miniapp -show_main; #appsSection: SELECT #buttons hide, hide"
+	if ns 
+		full = full.replace "*", ns
+	parts = full.split ";"
+	cmd = []
+
+	for instr in parts
+		sep = instr.indexOf(":")
+		[left, right] = [instr.slice(0, sep), instr.slice(sep+1)]
+		console.log "L",left, "R", right
+		idd = left
+		rtoks = right.split /\s+/
+		for tok in rtoks
+			ll "RToken", tok
+			if tok[0] == "+"
+				kl = tok.slice(1)
+				cmd.push "mwl.addClass ('#{idd}', '#{kl}')"
+			if tok[0] == "-"
+				kl = tok.slice(1)
+				cmd.push "mwl.removeClass ('#{idd}', '#{kl}')"
+
+	ll cmd				
+
+
+		
 
 
 
-main = ->
+
+
+
+exports.runTests = ->
 	tb = new TabBar("lists")
 
-	console.log tb.sel 1
+	#console.log tb.sel 1
+	exports.ops()
 
 
 exports.selectTab = selectTab
