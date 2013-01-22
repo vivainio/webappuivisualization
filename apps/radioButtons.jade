@@ -6,9 +6,9 @@
     tr(id = tb.trId())
       td(id = tb.tdId(1), class=tb.classesFirst(), onclick= tb.sel(1))
         | NORMAL
-      td.tab.tab_3_tabs.tab_not_selected(id=tb.tdId(2), onclick=tb.sel(2))
+      td(id=tb.tdId(2), class = tb.classes(), onclick=tb.sel(2))
         | INACTIVE
-      td.tab.tab_3_tabs_right.tab_not_selected(id=tb.tdId(3), onclick=tb.sel(3))
+      td(id=tb.tdId(3), class=tb.classesLast(), onclick=tb.sel(3))
         | GROUPED
   // End Tab Control
   // Tab Control Content
