@@ -11,6 +11,7 @@ class TabBar
 		mwl.setGroupTarget("##{tabbar}", "##{prefx}Tab_#{num}", "tab_selected", "tab_not_selected");
 		"""
 		return 
+	trId: -> "{@prefix}TabBar" 
 
 
 
@@ -34,3 +35,4 @@ main = ->
 
 
 exports.selectTab = selectTab
+exports.TabBar = TabBar
