@@ -9,6 +9,8 @@ class TabBar
 		"""
 		return s
 
+	contentParentId: -> @prefix + "TabControlContent"
+
 	trId: -> "#{@prefix}TabBar" 
 	tdId: (tabnum) -> "#{@prefix}Tab_#{tabnum}"
 
