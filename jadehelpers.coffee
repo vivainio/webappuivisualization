@@ -1,6 +1,5 @@
 class TabBar
-	constructor: (prefix) ->
-		@prefix = prefix
+	constructor: (@prefix, @numtabs) ->
 
 	selectTab: (num) ->
 		tabbar = @prefix + "TabBar"
@@ -11,7 +10,7 @@ class TabBar
 		mwl.setGroupTarget("##{tabbar}", "##{prefx}Tab_#{num}", "tab_selected", "tab_not_selected");
 		"""
 		return 
-	trId: -> "{@prefix}TabBar" 
+	trId: -> "#{@prefix}TabBar" 
 
 
 
