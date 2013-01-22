@@ -1,20 +1,18 @@
 class TabBar
 	constructor: (@prefix, @numtabs) ->
 
-	selectTab: (num) ->
+	sel: (num) ->
 		tabbar = @prefix + "TabBar"
 		contpane = @prefix + "TabControlContent"
-
-		s = """ 
-		mwl.setGroupTarget("##{contpane}", "##{prefix}Tab_#{num}_content", "show", "hide");
-		mwl.setGroupTarget("##{tabbar}", "##{prefx}Tab_#{num}", "tab_selected", "tab_not_selected");
+		tabid = "#" + @prefix + "Tab_" + num
+		s = """      mwl.setGroupTarget("##{contpane}", "#{tabid}_content", "show", "hide");      mwl.setGroupTarget("##{tabbar}", "#{tabid}", "tab_selected", "tab_not_selected");
 		"""
-		return 
+		return s
+
 	trId: -> "#{@prefix}TabBar" 
 	tdId: (tabnum) -> "#{@prefix}Tab_#{tabnum}"
+
 	contId: (tabnum) -> "#{@prefix}Tab_#{tabnum}_content"
-
-
 
 
 
@@ -34,7 +32,8 @@ selectTab = (num, maxnum) ->
 
 main = ->
 	tb = new TabBar("lists")
-	console.log tb.seletTab 1
+
+	console.log tb.sel 1
 
 
 exports.selectTab = selectTab
