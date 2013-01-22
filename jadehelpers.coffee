@@ -5,7 +5,7 @@ class TabBar
 		tabbar = @prefix + "TabBar"
 		contpane = @prefix + "TabControlContent"
 		tabid = "#" + @prefix + "Tab_" + num
-		s = """      mwl.setGroupTarget("##{contpane}", "#{tabid}_content", "show", "hide");      mwl.setGroupTarget("##{tabbar}", "#{tabid}", "tab_selected", "tab_not_selected");
+		s = """mwl.setGroupTarget("##{contpane}", "#{tabid}_content", "show", "hide");      mwl.setGroupTarget("##{tabbar}", "#{tabid}", "tab_selected", "tab_not_selected");
 		"""
 		return s
 

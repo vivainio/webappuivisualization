@@ -1,9 +1,15 @@
+- var mac = require("./jadehelpers")
+- var tb = new mac.TabBar("checkBoxes", 3)
 #checkBoxes.slider_section.hide
   table.fill(cellpadding='0', cellspacing='0', summary='Tab Table')
-    tr#checkBoxesTabBar
-      td#checkBoxesTab_1.tab.tab_3_tabs.tab_selected(onclick='mwl.setGroupTarget("#checkBoxesTabControlContent", "#checkBoxesTab_1_content", "show", "hide"); mwl.setGroupTarget("#checkBoxesTabBar", "#checkBoxesTab_1", "tab_selected", "tab_not_selected");') NORMAL
-      td#checkBoxesTab_2.tab.tab_3_tabs.tab_not_selected(onclick='mwl.setGroupTarget("#checkBoxesTabControlContent", "#checkBoxesTab_2_content", "show", "hide"); mwl.setGroupTarget("#checkBoxesTabBar", "#checkBoxesTab_2", "tab_selected", "tab_not_selected");') INACTIVE
-      td#checkBoxesTab_3.tab.tab_3_tabs_right.tab_not_selected(onclick='mwl.setGroupTarget("#checkBoxesTabControlContent", "#checkBoxesTab_3_content", "show", "hide"); mwl.setGroupTarget("#checkBoxesTabBar", "#checkBoxesTab_3", "tab_selected", "tab_not_selected");') GROUPED
+    tr(id = tb.trId())
+      td(id=tb.tdId(1), class=tb.classesFirst(), onclick= tb.sel(1))
+        | NORMAL
+      td(id=tb.tdId(2), class=tb.classes(), onclick= tb.sel(2))
+        | INACTIVE
+      td(id=tb.tdId(3), class=tb.classesLast(), onclick= tb.sel(3))
+        | GROUPED
+    
   // Tab Control Content
   #checkBoxesTabControlContent
     #checkBoxesTab_1_content.show
