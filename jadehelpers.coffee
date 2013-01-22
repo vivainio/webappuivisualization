@@ -12,6 +12,14 @@ class TabBar
 	trId: -> "#{@prefix}TabBar" 
 	tdId: (tabnum) -> "#{@prefix}Tab_#{tabnum}"
 
+	classesFirst: ->
+		return ['tab', "tab_#{@numtabs}_tabs", "tab_selected"]
+
+	classes: ->
+		return ['tab', "tab_#{@numtabs}_tabs", "tab_not_selected"]
+	classesLast: ->
+		return ['tab', "tab_#{@numtabs}_tabs_right", "tab_not_selected"]
+
 	contId: (tabnum) -> "#{@prefix}Tab_#{tabnum}_content"
 
 
