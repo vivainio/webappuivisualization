@@ -1,0 +1,218 @@
+#tabs.slider_section.hide
+  #tab_views.show
+    #tabs_2tabs_view.show
+      table#text_tabs2_tab_bar_table.tab_table.show(cellpadding='0', cellspacing='0', summary='Tab Table')
+        // Text tab bar
+        tr#text_tabs2_tab_bar
+          td#text_tabs_tab_2_1.tab.tab_2_tabs.tab_selected(onclick='mwl.setGroupTarget("#tabs_2tabs_control_content", "#tabs_tab_2_1_content", "show", "hide"); mwl.setGroupTarget("#text_tabs2_tab_bar", "#text_tabs_tab_2_1", "tab_selected", "tab_not_selected");')
+            span
+              | TAB
+              | 1
+          td#text_tabs_tab_2_2.tab.tab_2_tabs_right.tab_not_selected(onclick='mwl.setGroupTarget("#tabs_2tabs_control_content", "#tabs_tab_2_2_content", "show", "hide"); mwl.setGroupTarget("#text_tabs2_tab_bar", "#text_tabs_tab_2_2", "tab_selected", "tab_not_selected");')
+            | TAB
+            | 2
+        // End text tab bar
+      table#icon_tabs2_tab_bar_table.fill.hide(cellpadding='0', cellspacing='0', summary='Tab Table')
+        tr#icon_tabs2_tab_bar
+          td#icon_tabs_tab_2_1.tab.tab_2_tabs.tab_selected(onclick='\
+          mwl.setGroupTarget("#tabs_2tabs_control_content", "#tabs_tab_2_1_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs2_tab_bar", "#icon_tabs_tab_2_1", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_2_2.tab.tab_2_tabs_right.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_2tabs_control_content", "#tabs_tab_2_2_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs2_tab_bar", "#icon_tabs_tab_2_2", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+      // End Tab Control
+      // Tab Control Content
+      #tabs_2tabs_control_content
+        #tabs_tab_2_1_content.show
+          .list_section_header tab 1 content
+        #tabs_tab_2_2_content.hide
+          .list_section_header tab 2 content
+        .information_text_block Pick tabbar variant
+      input#text_tabs2_button.button.tab_view_selection_button.show(type='button', name='button1', value='2 tabs - text', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+      input#icon_tabs2_button.button.tab_view_selection_button.hide(type='button', name='button1', value='2 tabs - icons', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+    #tabs_3tabs_view.hide
+      table#text_tabs3_tab_bar_table.fill.show(cellpadding='0', cellspacing='0', summary='Tab Table')
+        // Text tab bar
+        tr#text_tabs3_tab_bar
+          td#text_tabs_tab_3_1.tab.tab_3_tabs.tab_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_1_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs3_tab_bar", "#text_tabs_tab_3_1", "tab_selected", "tab_not_selected");\
+          ') TAB 1
+          td#text_tabs_tab_3_2.tab.tab_3_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_2_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs3_tab_bar", "#text_tabs_tab_3_2", "tab_selected", "tab_not_selected");\
+          ') TAB 2
+          td#text_tabs_tab_3_3.tab.tab_3_tabs_right.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_3_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs3_tab_bar", "#text_tabs_tab_3_3", "tab_selected", "tab_not_selected");\
+          ') TAB 3
+        // End text tab bar
+      table#icon_tabs3_tab_bar_table.fill.hide(cellpadding='0', cellspacing='0', summary='Tab Table')
+        // Icon tab bar
+        tr#icon_tabs3_tab_bar
+          td#icon_tabs_tab_3_1.tab.tab_3_tabs.tab_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_1_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs3_tab_bar", "#icon_tabs_tab_3_1", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_3_2.tab.tab_3_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_2_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs3_tab_bar", "#icon_tabs_tab_3_2", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_3_3.tab.tab_3_tabs_right.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_3tabs_control_content", "#tabs_tab_3_3_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs3_tab_bar", "#icon_tabs_tab_3_3", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+        // End icon tab bar
+      // End Tab Control
+      // Tab Control Content
+      #tabs_3tabs_control_content
+        #tabs_tab_3_1_content.show
+          .list_section_header tab 1 content
+        #tabs_tab_3_2_content.hide
+          .list_section_header tab 2 content
+        #tabs_tab_3_3_content.hide
+          .list_section_header tab 3 content
+        .information_text_block Pick tabbar variant
+      input#text_tabs3_button.button.tab_view_selection_button.show(type='button', name='button1', value='3 tabs - text', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+      input#icon_tabs3_button.button.tab_view_selection_button.hide(type='button', name='button1', value='3 tabs - icons', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+    #tabs_4tabs_view.hide
+      table#text_tabs4_tab_bar_table.fill.show(cellpadding='0', cellspacing='0', summary='Tab Table')
+        // Text tab bar
+        tr#text_tabs4_tab_bar
+          td#text_tabs_tab_4_1.tab.tab_4_tabs.tab_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_1_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs4_tab_bar", "#text_tabs_tab_4_1", "tab_selected", "tab_not_selected");\
+          ')
+            span TAB 1
+          td#text_tabs_tab_4_2.tab.tab_4_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_2_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs4_tab_bar", "#text_tabs_tab_4_2", "tab_selected", "tab_not_selected");\
+          ') TAB 2
+          td#text_tabs_tab_4_3.tab.tab_4_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_3_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs4_tab_bar", "#text_tabs_tab_4_3", "tab_selected", "tab_not_selected");\
+          ') TAB 3
+          td#text_tabs_tab_4_4.tab.tab_4_tabs_right.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_4_content", "show", "hide");\
+          mwl.setGroupTarget("#text_tabs4_tab_bar", "#text_tabs_tab_4_4", "tab_selected", "tab_not_selected");\
+          ') TAB 4
+        // End text tab bar
+      table#icon_tabs4_tab_bar_table.fill.hide(cellpadding='0', cellspacing='0', summary='Tab Table')
+        // Icon tab bar
+        tr#icon_tabs4_tab_bar
+          td#icon_tabs_tab_4_1.tab.tab_4_tabs.tab_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_1_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs4_tab_bar", "#icon_tabs_tab_4_1", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_4_2.tab.tab_4_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_2_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs4_tab_bar", "#icon_tabs_tab_4_2", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_4_3.tab.tab_4_tabs.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_3_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs4_tab_bar", "#icon_tabs_tab_4_3", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+          td#icon_tabs_tab_4_4.tab.tab_4_tabs_right.tab_not_selected(onclick='\
+          mwl.setGroupTarget("#tabs_4tabs_control_content", "#tabs_tab_4_4_content", "show", "hide");\
+          mwl.setGroupTarget("#icon_tabs4_tab_bar", "#icon_tabs_tab_4_4", "tab_selected", "tab_not_selected");\
+          ')
+            img(src='img/smile.png', alt='smile')
+        // End icon tab bar
+      // End Tab Control
+      // Tab Control Content
+      #tabs_4tabs_control_content
+        #tabs_tab_4_1_content.show
+          .list_section_header tab 1 content
+        #tabs_tab_4_2_content.hide
+          .list_section_header tab 2 content
+        #tabs_tab_4_3_content.hide
+          .list_section_header tab 3 content
+        #tabs_tab_4_4_content.hide
+          .list_section_header tab 4 content
+        .information_text_block Pick tabbar variant
+      input#text_tabs4_button.button.tab_view_selection_button.show(type='button', name='button1', value='4 tabs - text', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+      input#icon_tabs4_button.button.tab_view_selection_button.hide(type='button', name='button1', value='4 tabs - icons', onclick='\
+      mwl.setGroupTarget("#tabs", "#tabs_selection_view", "show", "hide");\
+      mwl.setGroupTarget("#navigateToggle","#tabs_backButton", "show", "hide");\
+      ')
+  #tabs_selection_view.hide
+    .list_section_header select example
+    .text_list_item(onclick='\
+    mwl.switchClass("#text_tabs2_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#icon_tabs2_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#text_tabs2_button", "show", "hide");\
+    mwl.switchClass("#icon_tabs2_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_2tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 2 tabs - icons
+    .text_list_item(onclick='\
+    mwl.switchClass("#text_tabs3_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#icon_tabs3_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#text_tabs3_button", "show", "hide");\
+    mwl.switchClass("#icon_tabs3_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_3tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 3 tabs - icons
+    .text_list_item(onclick='\
+    mwl.switchClass("#text_tabs4_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#icon_tabs4_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#text_tabs4_button", "show", "hide");\
+    mwl.switchClass("#icon_tabs4_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_4tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 4 tabs - icons
+    .text_list_item(onclick='\
+    mwl.switchClass("#icon_tabs2_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#text_tabs2_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#icon_tabs2_button", "show", "hide");\
+    mwl.switchClass("#text_tabs2_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_2tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 2 tabs - text
+    .text_list_item(onclick='\
+    mwl.switchClass("#icon_tabs3_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#text_tabs3_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#icon_tabs3_button", "show", "hide");\
+    mwl.switchClass("#text_tabs3_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_3tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 3 tabs - text
+    .text_list_item(onclick='\
+    mwl.switchClass("#icon_tabs4_tab_bar_table", "show", "hide");\
+    mwl.switchClass("#text_tabs4_tab_bar_table", "hide", "show");\
+    mwl.switchClass("#icon_tabs4_button", "show", "hide");\
+    mwl.switchClass("#text_tabs4_button", "hide", "show");\
+    mwl.setGroupTarget("#tabs", "#tab_views", "show", "hide"); \
+    mwl.setGroupTarget("#tab_views", "#tabs_4tabs_view", "show", "hide");\
+    mwl.setGroupTarget("#navigateToggle","#miniappGoHomeToggle", "show", "hide");')
+      | 4 tabs - text
