@@ -52,25 +52,26 @@ exports.ops = (full, ns = null) ->
 
 	for instr in parts
 		sep = instr.indexOf(":")
-		[left, right] = [instr.slice(0, sep), instr.slice(sep+1)]
+		[left, right] = [instr.slice(0, sep).trim(), instr.slice(sep+1).trim()]
 		console.log "L",left, "R", right
 		idd = left
 		rtoks = right.split /\s+/
-		for tok in rtoks
-			ll "RToken", tok
-			if tok[0] == "+"
-				kl = tok.slice(1)
-				cmd.push "mwl.addClass ('#{idd}', '#{kl}')"
-			if tok[0] == "-"
-				kl = tok.slice(1)
-				cmd.push "mwl.removeClass ('#{idd}', '#{kl}')"
-			if tok[0] == "/"
-				kl = tok.slice(1)
-				cmd.push "mwl.toggleClass ('#{idd}', '#{kl}')"
+		ltoks = left.split /\s+/
+		for idd in ltoks
+			for tok in rtoks				
+				ll "RToken", tok
+				if tok[0] == "+"
+					kl = tok.slice(1)
+					cmd.push "mwl.addClass ('#{idd}', '#{kl}')"
+				if tok[0] == "-"
+					kl = tok.slice(1)
+					cmd.push "mwl.removeClass ('#{idd}', '#{kl}')"
+				if tok[0] == "/"
+					kl = tok.slice(1)
+					cmd.push "mwl.toggleClass ('#{idd}', '#{kl}')"
 
 
-
-	ll cmd				
+	return cmd.join "; "
 		
 testOps = ->
 	orig = """
@@ -83,8 +84,13 @@ testOps = ->
     mwl.toggleClass("#category1_open_arrow", "show");\	
 	"""
 
-	ss = exports.ops "*_items: /show /hide ; *_closed_arrow: /hide /show ; *_open_arrow: /hide /show",
+	# splitting open_arrow to special case just as an example
+	ss = exports.ops "*_items *_closed_arrow : /hide /show; *_open_arrow: /hide /show",
 		"#category1"
+
+	ll ss
+
+
 
 
 
