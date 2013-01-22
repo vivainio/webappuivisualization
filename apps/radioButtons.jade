@@ -6,13 +6,9 @@
     tr(id = tb.trId())
       td.tab.tab_3_tabs.tab_selected(id = tb.tdId(1), onclick= tb.sel(1))
         | NORMAL
-      td.tab.tab_3_tabs.tab_not_selected(id=tb.tdId(2), onclick='\
-      mwl.setGroupTarget("#radioButtonsTabControlContent", "#radioButtonsTab_2_content", "show", "hide");\
-      mwl.setGroupTarget("#radioButtonsTabBar", "#radioButtonsTab_2", "tab_selected", "tab_not_selected");')
+      td.tab.tab_3_tabs.tab_not_selected(id=tb.tdId(2), onclick=tb.sel(2))
         | INACTIVE
-      td.tab.tab_3_tabs_right.tab_not_selected(id=tb.tdId(3), onclick='\
-      mwl.setGroupTarget("#radioButtonsTabControlContent", "#radioButtonsTab_3_content", "show", "hide");\
-      mwl.setGroupTarget("#radioButtonsTabBar", "#radioButtonsTab_3", "tab_selected", "tab_not_selected");')
+      td.tab.tab_3_tabs_right.tab_not_selected(id=tb.tdId(3), onclick=tb.sel(3))
         | GROUPED
   // End Tab Control
   // Tab Control Content
