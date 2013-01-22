@@ -12,6 +12,7 @@ class TabBar
 		return 
 	trId: -> "#{@prefix}TabBar" 
 	tdId: (tabnum) -> "#{@prefix}Tab_#{tabnum}"
+	contId: (tabnum) -> "#{@prefix}Tab_#{tabnum}_content"
 
 
 
