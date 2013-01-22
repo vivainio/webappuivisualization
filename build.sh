@@ -1,3 +1,3 @@
 coffee -c jadehelpers.coffee 
-./jadepp test.jade
-pygmentize test.html
+./jadepp -P index.jade
+pygmentize index.html
