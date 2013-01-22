@@ -1,3 +1,5 @@
+- var mwt = require("./jadehelpers")
+
 #lists.slider_section.hide
   table.fill(cellpadding='0', cellspacing='0', summary='Tab Table')
     tr#listsTabBar
@@ -242,14 +244,8 @@
     // Category tab content
     #listsTab_4_content.hide
       #category1.category
-        #category1_header.category_header(onclick='\
-        mwl.toggleClass("#category1_items", "show");\
-        mwl.toggleClass("#category1_items", "hide");\
-        mwl.toggleClass("#category1_closed_arrow", "hide");\
-        mwl.toggleClass("#category1_closed_arrow", "show");\
-        mwl.toggleClass("#category1_open_arrow", "hide");\
-        mwl.toggleClass("#category1_open_arrow", "show");\
-        ')
+        #category1_header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category1'))
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left Category 1
@@ -263,13 +259,9 @@
           .text_list_item(onclick='') Item 1-3
           .text_list_item(onclick='') Item 1-4
       #category2.category
-        #category2_header.category_header(onclick='\
-        mwl.toggleClass("#category2_items", "show");\
-        mwl.toggleClass("#category2_items", "hide");\
-        mwl.toggleClass("#category2_closed_arrow", "hide");\
-        mwl.toggleClass("#category2_closed_arrow", "show");\
-        mwl.toggleClass("#category2_open_arrow", "hide");\
-        mwl.toggleClass("#category2_open_arrow", "show");')
+        #category2_header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category2'))
+          
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left
@@ -284,7 +276,8 @@
           .text_list_item(onclick='') Item 2-3
           .text_list_item(onclick='') Item 2-4
       #category3.category
-        #category3header.category_header(onclick='mwl.toggleClass("#category3_items", "show");mwl.toggleClass("#category3_items", "hide");mwl.toggleClass("#category3_closed_arrow", "hide");mwl.toggleClass("#category3_closed_arrow", "show");mwl.toggleClass("#category3_open_arrow", "hide");mwl.toggleClass("#category3_open_arrow", "show");')
+        #category3header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category3'))
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left
@@ -309,7 +302,8 @@
             img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
             span.valignMdl Item 3-4
       #category4.category
-        #category4_header.category_header(onclick='mwl.toggleClass("#category4_items", "show");mwl.toggleClass("#category4_items", "hide");mwl.toggleClass("#category4_closed_arrow", "hide");mwl.toggleClass("#category4_closed_arrow", "show");mwl.toggleClass("#category4_open_arrow", "hide");mwl.toggleClass("#category4_open_arrow", "show");')
+        #category4_header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category4'))
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left
@@ -334,14 +328,8 @@
             img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
             span.valignMdl Item 4-4
       #category5.category
-        #category5header.category_header(onclick='\
-        mwl.toggleClass("#category5_items", "show");\
-        mwl.toggleClass("#category5_items", "hide");\
-        mwl.toggleClass("#category5_closed_arrow", "hide");\
-        mwl.toggleClass("#category5_closed_arrow", "show");\
-        mwl.toggleClass("#category5_open_arrow", "hide");\
-        mwl.toggleClass("#category5_open_arrow", "show");\
-        ')
+        #category5header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category5'))
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left
@@ -405,14 +393,8 @@
                     td.alignR
                       img(src='img/yellow_dot.png')
       #category6.category
-        #category6header.category_header(onclick='\
-        mwl.toggleClass("#category6_items", "show");\
-        mwl.toggleClass("#category6_items", "hide");\
-        mwl.toggleClass("#category6_closed_arrow", "hide");\
-        mwl.toggleClass("#category6_closed_arrow", "show");\
-        mwl.toggleClass("#category6_open_arrow", "hide");\
-        mwl.toggleClass("#category6_open_arrow", "show");\
-        ')
+        #category6header.category_header(onclick=mwt.ops(
+          '*_items *_closed_arrow *_open_arrow: /show /hide', '#category6'))
           table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
             tr
               td.category_left
