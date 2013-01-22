@@ -1,0 +1,478 @@
+#lists.slider_section.hide
+  table.fill(cellpadding='0', cellspacing='0', summary='Tab Table')
+    tr#listsTabBar
+      td#listsTab_1.tab.tab_selected(onclick='\
+      mwl.setGroupTarget("#listsTabControlContent", "#listsTab_1_content", "show", "hide");\
+      mwl.setGroupTarget("#listsTabBar", "#listsTab_1", "tab_selected", "tab_not_selected");\
+      ') Normal
+      td#listsTab_2.tab.tab_not_selected(onclick='\
+      mwl.setGroupTarget("#listsTabControlContent", "#listsTab_2_content", "show", "hide");\
+      mwl.setGroupTarget("#listsTabBar", "#listsTab_2", "tab_selected", "tab_not_selected");\
+      ') Label
+      td#listsTab_3.tab.tab_not_selected(onclick='\
+      mwl.setGroupTarget("#listsTabControlContent", "#listsTab_3_content", "show", "hide");\
+      mwl.setGroupTarget("#listsTabBar", "#listsTab_3", "tab_selected", "tab_not_selected");\
+      ') Table
+      td#listsTab_4.tab.tab_not_selected(onclick='\
+      mwl.setGroupTarget("#listsTabControlContent", "#listsTab_4_content", "show", "hide");\
+      mwl.setGroupTarget("#listsTabBar", "#listsTab_4", "tab_selected", "tab_not_selected");\
+      ') Category
+  // Tab Control Content
+  #listsTabControlContent
+    // Normal tab content
+    #listsTab_1_content.show
+      .text_list_item(onclick='') Item 1
+      .text_list_item(onclick='') Item 2
+      .text_list_item(onclick='') Item 3
+      .text_list_item(onclick='') Item 4
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 5
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 6
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 7
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 8
+      // Fancy list items
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 9
+                td.alignR 12:34
+              tr
+                td Content 9
+                td.alignR
+                  img(src='img/red_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 10
+                td.alignR 12:35
+              tr
+                td Content 10
+                td.alignR
+                  img(src='img/red_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 11
+                td.alignR 12:36
+              tr
+                td Content 11
+                td.alignR
+                  img(src='img/green_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 12
+                td.alignR 12:37
+              tr
+                td Content 12
+                td.alignR
+                  img(src='img/yellow_dot.png')
+    // End Normal tab content
+    // Label tab content
+    #listsTab_2_content.hide
+      .list_section_header no icon
+      .text_list_item(onclick='') Item 1
+      .text_list_item(onclick='') Item 2
+      .text_list_item(onclick='') Item 3
+      .text_list_item(onclick='') Item 4
+      .list_section_header with icon
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 5
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 6
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 7
+      .picture_list_item(onclick='')
+        img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+        span.valignMdl Item 8
+      // Fancy list items
+      .list_section_header fancy
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 9
+                td.alignR 12:34
+              tr
+                td Content 9
+                td.alignR
+                  img(src='img/red_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 10
+                td.alignR 12:35
+              tr
+                td Content 10
+                td.alignR
+                  img(src='img/red_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 11
+                td.alignR 12:36
+              tr
+                td Content 11
+                td.alignR
+                  img(src='img/green_dot.png')
+      table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+        tr
+          td
+            img(src='img/smile.png', height='20', width='20', alt='smile')
+          td.fancy_list_item
+            table.fill(cellspacing='4', cellpadding='0')
+              tr
+                td Title 12
+                td.alignR 12:37
+              tr
+                td Content 12
+                td.alignR
+                  img(src='img/yellow_dot.png')
+    // End Label tab content
+    // Table tab content
+    #listsTab_3_content.hide
+      .item_container
+        .text_list_item(onclick='') Item 1-1
+      .item_container
+        .text_list_item(onclick='') Item 2-1
+        .text_list_item(onclick='') Item 2-2
+        .text_list_item(onclick='') Item 2-3
+      .item_container
+        .picture_list_item(onclick='')
+          img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+          span.valignMdl Item 3-1
+        .picture_list_item(onclick='')
+          img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+          span.valignMdl Item 3-2
+        .picture_list_item(onclick='')
+          img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+          span.valignMdl Item 3-3
+      .item_container
+        // Fancy list items
+        table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+          tr
+            td
+              img(src='img/smile.png', height='20', width='20', alt='smile')
+            td.fancy_list_item
+              table.fill(cellspacing='4', cellpadding='0')
+                tr
+                  td Title 9
+                  td.alignR 12:34
+                tr
+                  td Content 9
+                  td.alignR
+                    img(src='img/red_dot.png')
+        table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+          tr
+            td
+              img(src='img/smile.png', height='20', width='20', alt='smile')
+            td.fancy_list_item
+              table.fill(cellspacing='4', cellpadding='0')
+                tr
+                  td Title 10
+                  td.alignR 12:35
+                tr
+                  td Content 10
+                  td.alignR
+                    img(src='img/red_dot.png')
+        table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+          tr
+            td
+              img(src='img/smile.png', height='20', width='20', alt='smile')
+            td.fancy_list_item
+              table.fill(cellspacing='4', cellpadding='0')
+                tr
+                  td Title 11
+                  td.alignR 12:36
+                tr
+                  td Content 11
+                  td.alignR
+                    img(src='img/green_dot.png')
+        table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+          tr
+            td
+              img(src='img/smile.png', height='20', width='20', alt='smile')
+            td.fancy_list_item
+              table.fill(cellspacing='4', cellpadding='0')
+                tr
+                  td Title 12
+                  td.alignR 12:37
+                tr
+                  td Content 12
+                  td.alignR
+                    img(src='img/yellow_dot.png')
+    // End table tab content
+    // Category tab content
+    #listsTab_4_content.hide
+      #category1.category
+        #category1_header.category_header(onclick='\
+        mwl.toggleClass("#category1_items", "show");\
+        mwl.toggleClass("#category1_items", "hide");\
+        mwl.toggleClass("#category1_closed_arrow", "hide");\
+        mwl.toggleClass("#category1_closed_arrow", "show");\
+        mwl.toggleClass("#category1_open_arrow", "hide");\
+        mwl.toggleClass("#category1_open_arrow", "show");\
+        ')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left Category 1
+              td.category_right
+                span#category1_arrows
+                  img#category1_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category1_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category1_items.hide.item_container
+          .text_list_item(onclick='') Item 1-1
+          .text_list_item(onclick='') Item 1-2
+          .text_list_item(onclick='') Item 1-3
+          .text_list_item(onclick='') Item 1-4
+      #category2.category
+        #category2_header.category_header(onclick='\
+        mwl.toggleClass("#category2_items", "show");\
+        mwl.toggleClass("#category2_items", "hide");\
+        mwl.toggleClass("#category2_closed_arrow", "hide");\
+        mwl.toggleClass("#category2_closed_arrow", "show");\
+        mwl.toggleClass("#category2_open_arrow", "hide");\
+        mwl.toggleClass("#category2_open_arrow", "show");')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left
+                div Category 2
+              td.category_right
+                span#category2_arrows
+                  img#category2_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category2_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category2_items.hide.item_container
+          .text_list_item(onclick='') Item 2-1
+          .text_list_item(onclick='') Item 2-2
+          .text_list_item(onclick='') Item 2-3
+          .text_list_item(onclick='') Item 2-4
+      #category3.category
+        #category3header.category_header(onclick='mwl.toggleClass("#category3_items", "show");mwl.toggleClass("#category3_items", "hide");mwl.toggleClass("#category3_closed_arrow", "hide");mwl.toggleClass("#category3_closed_arrow", "show");mwl.toggleClass("#category3_open_arrow", "hide");mwl.toggleClass("#category3_open_arrow", "show");')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left
+                div
+                  | Category 3 +
+                  | icon
+              td.category_right
+                span#category3_arrows
+                  img#category3_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category3_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category3_items.hide.item_container
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 3-1
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 3-2
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 3-3
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 3-4
+      #category4.category
+        #category4_header.category_header(onclick='mwl.toggleClass("#category4_items", "show");mwl.toggleClass("#category4_items", "hide");mwl.toggleClass("#category4_closed_arrow", "hide");mwl.toggleClass("#category4_closed_arrow", "show");mwl.toggleClass("#category4_open_arrow", "hide");mwl.toggleClass("#category4_open_arrow", "show");')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left
+                div
+                  | Category 4 +
+                  | icon
+              td.category_right
+                span#category4_arrows
+                  img#category4_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category4_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category4_items.hide.item_container
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 4-1
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 4-2
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 4-3
+          .picture_list_item(onclick='')
+            img.picture_list_item_image(src='img/smile.png', height='20', width='20', alt='smile')
+            span.valignMdl Item 4-4
+      #category5.category
+        #category5header.category_header(onclick='\
+        mwl.toggleClass("#category5_items", "show");\
+        mwl.toggleClass("#category5_items", "hide");\
+        mwl.toggleClass("#category5_closed_arrow", "hide");\
+        mwl.toggleClass("#category5_closed_arrow", "show");\
+        mwl.toggleClass("#category5_open_arrow", "hide");\
+        mwl.toggleClass("#category5_open_arrow", "show");\
+        ')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left
+                div Category 5 fancy
+              td.category_right
+                span#category5_arrows
+                  img#category5_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category5_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category5_items.hide.item_container
+          // Fancy list items
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 5-1
+                    td.alignR 12:34
+                  tr
+                    td Content 5-1
+                    td.alignR
+                      img(src='img/red_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 5-2
+                    td.alignR 12:35
+                  tr
+                    td Content 5-2
+                    td.alignR
+                      img(src='img/red_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 5-3
+                    td.alignR 12:36
+                  tr
+                    td Content 5-3
+                    td.alignR
+                      img(src='img/green_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 5-4
+                    td.alignR 12:37
+                  tr
+                    td Content 5-4
+                    td.alignR
+                      img(src='img/yellow_dot.png')
+      #category6.category
+        #category6header.category_header(onclick='\
+        mwl.toggleClass("#category6_items", "show");\
+        mwl.toggleClass("#category6_items", "hide");\
+        mwl.toggleClass("#category6_closed_arrow", "hide");\
+        mwl.toggleClass("#category6_closed_arrow", "show");\
+        mwl.toggleClass("#category6_open_arrow", "hide");\
+        mwl.toggleClass("#category6_open_arrow", "show");\
+        ')
+          table.fill(cellpadding='0', cellspacing='0', summary='Category Table')
+            tr
+              td.category_left
+                div Category 6 fancy
+              td.category_right
+                span#category6_arrows
+                  img#category6_closed_arrow.show(src='img/button_right.png', alt='show')
+                  img#category6_open_arrow.hide(src='img/button_down.png', alt='hide')
+        #category6_items.hide.item_container
+          // Fancy list items
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 6-1
+                    td.alignR 12:34
+                  tr
+                    td Content 6-1
+                    td.alignR
+                      img(src='img/red_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 6-2
+                    td.alignR 12:35
+                  tr
+                    td Content 6-2
+                    td.alignR
+                      img(src='img/red_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 6-3
+                    td.alignR 12:36
+                  tr
+                    td Content 6-3
+                    td.alignR
+                      img(src='img/green_dot.png')
+          table.picture_list_item(cellspacing='0', cellpadding='0', onclick='')
+            tr
+              td
+                img(src='img/smile.png', height='20', width='20', alt='smile')
+              td.fancy_list_item
+                table.fill(cellspacing='4', cellpadding='0')
+                  tr
+                    td Title 6-4
+                    td.alignR 12:37
+                  tr
+                    td Content 6-4
+                    td.alignR
+                      img(src='img/yellow_dot.png')
+    // End Category tab content

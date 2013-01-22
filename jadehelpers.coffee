@@ -40,6 +40,11 @@ selectTab = (num, maxnum) ->
 	console.log(rest)
 	return first + rest
 
+exports.toggleHide = (nodes...) ->
+	
+
+
+
 main = ->
 	tb = new TabBar("lists")
 
