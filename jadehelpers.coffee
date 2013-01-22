@@ -43,9 +43,10 @@ selectTab = (num, maxnum) ->
 	return first + rest
 
 exports.ops = (full, ns = null) ->
-	full = "#navigateToggle: SELECT #home show hide; #slider: +show_miniapp -show_main; #appsSection: SELECT #buttons hide, hide"
+	#full = "#navigateToggle: SELECT #home show hide; #slider: +show_miniapp -show_main; #appsSection: SELECT #buttons hide, hide"
 	if ns 
-		full = full.replace "*", ns
+		full = full.replace /\*/g, ns
+		ll "replaced",full
 	parts = full.split ";"
 	cmd = []
 
@@ -63,11 +64,28 @@ exports.ops = (full, ns = null) ->
 			if tok[0] == "-"
 				kl = tok.slice(1)
 				cmd.push "mwl.removeClass ('#{idd}', '#{kl}')"
+			if tok[0] == "/"
+				kl = tok.slice(1)
+				cmd.push "mwl.toggleClass ('#{idd}', '#{kl}')"
+
+
 
 	ll cmd				
-
-
 		
+testOps = ->
+	orig = """
+
+    mwl.toggleClass("#category1_items", "show");\
+    mwl.toggleClass("#category1_items", "hide");\
+    mwl.toggleClass("#category1_closed_arrow", "hide");\
+    mwl.toggleClass("#category1_closed_arrow", "show");\
+    mwl.toggleClass("#category1_open_arrow", "hide");\
+    mwl.toggleClass("#category1_open_arrow", "show");\	
+	"""
+
+	ss = exports.ops "*_items: /show /hide ; *_closed_arrow: /hide /show ; *_open_arrow: /hide /show",
+		"#category1"
+
 
 
 
@@ -75,10 +93,9 @@ exports.ops = (full, ns = null) ->
 
 
 exports.runTests = ->
+	testOps()
 	tb = new TabBar("lists")
 
-	#console.log tb.sel 1
-	exports.ops()
 
 
 exports.selectTab = selectTab
