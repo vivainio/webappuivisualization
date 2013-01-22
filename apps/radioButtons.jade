@@ -1,0 +1,134 @@
+- var mac = require("./jadehelpers")
+#radioButtons.slider_section.hide
+  - var tb = new mac.TabBar("radioButtons", 3)
+
+  table.fill(cellpadding='0', cellspacing='0', summary='Tab Table')
+    tr(id = tb.trId())
+      td.tab.tab_3_tabs.tab_selected(id = tb.tdId(1), onclick='\
+      mwl.setGroupTarget("#radioButtonsTabControlContent", "#radioButtonsTab_1_content", "show", "hide");\
+      mwl.setGroupTarget("#radioButtonsTabBar", "#radioButtonsTab_1", "tab_selected", "tab_not_selected");')
+        | NORMAL
+      td#radioButtonsTab_2.tab.tab_3_tabs.tab_not_selected(onclick='\
+      mwl.setGroupTarget("#radioButtonsTabControlContent", "#radioButtonsTab_2_content", "show", "hide");\
+      mwl.setGroupTarget("#radioButtonsTabBar", "#radioButtonsTab_2", "tab_selected", "tab_not_selected");')
+        | INACTIVE
+      td#radioButtonsTab_3.tab.tab_3_tabs_right.tab_not_selected(onclick='\
+      mwl.setGroupTarget("#radioButtonsTabControlContent", "#radioButtonsTab_3_content", "show", "hide");\
+      mwl.setGroupTarget("#radioButtonsTabBar", "#radioButtonsTab_3", "tab_selected", "tab_not_selected");')
+        | GROUPED
+  // End Tab Control
+  // Tab Control Content
+  #radioButtonsTabControlContent
+    #radioButtonsTab_1_content.show
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_1', checked='checked')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_1')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 3
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_1')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 4
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_1')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 5
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_1')
+    #radioButtonsTab_2_content.hide
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_2', disabled='disabled', checked='checked')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_2', disabled='disabled')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 3
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_2', disabled='disabled')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 4
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_2', disabled='disabled')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 5
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_2', disabled='disabled')
+    #radioButtonsTab_3_content.hide
+      .featured_list_item Group 1
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1-1
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_1', checked='checked')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1-2
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_1')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1-3
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_1')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 1-4
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_1')
+      .featured_list_item Group 2
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2-1
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_2', checked='checked')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2-2
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_2')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2-3
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_2')
+      .checkable_list_item
+        table.fill(cellpadding='0', cellspacing='0')
+          tr
+            td.checkable_item_cell_left Item 2-4
+            td.checkable_item_cell_right
+              input(type='radio', name='tab_group_3_2')
